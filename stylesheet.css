@@ -133,12 +133,13 @@ section{
     padding: 100px 0;
 }
 
-.about, .skills{
+.about, .skills, .projects{
     font-family: 'Poppins', sans-serif;
 }
 
 .about .about-content, 
-.skills .skills-content{
+.skills .skills-content,
+.projects .projects-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -321,6 +322,11 @@ section .title::after{
 
 .skills-content .right .mysql::before{
     width: 75%;
+}
+
+/* Projects section */
+.projects .title::after{
+    content: "what i've done";
 }
 
 /* Responsive media query */
