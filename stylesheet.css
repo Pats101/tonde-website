@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -133,7 +137,7 @@ section{
     padding: 100px 0;
 }
 
-.about, .skills, .projects, .contact{
+.about, .skills, .projects, .hobbies, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -329,6 +333,11 @@ section .title::after{
     content: "what i've done";
 }
 
+/* Hobbies section styling */
+.hobbies .title::after{
+    content: "what i do for fun";
+}
+
 /* Contact section styling */
 .contact .title::after{
     content: "get in touch";
@@ -437,6 +446,22 @@ section .title::after{
 .contact .right form .button button:hover{
     color: #0245aa;
     background: none;
+}
+
+/* Footer section styling */
+footer{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+
+footer span a{
+    color: aqua;
+    text-decoration: none;
+}
+
+footer span a:hover{
+    text-decoration: underline;
 }
 
 /* Responsive media query */
