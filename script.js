@@ -1,3 +1,5 @@
+const skillsContent = document.getElementsByClassName('my_skill_content'), 
+        skillsHeader=document.querySelectorAll('.skill_header');
 const mySection = document.querySelector(".myProfile"),
         hireBtn = mySection.querySelector("#hireBtn"),
         closeBtn = mySection.querySelectorAll("#close");
@@ -52,4 +54,19 @@ closeBtn.forEach(cBtn => {
     cBtn.addEventListener("click", () => {
         mySection.classList.remove("show") 
     });
-})
+});
+
+// Skills Section
+function toggleSkills(){
+    let itemClass = this.parentNode.className;
+    for (p = 0; p < skillsContent.length; p++) {
+        skillsContent[p].className = 'my_skill_content skills_close';        
+    }
+    if(itemClass === 'my_skill_content skills_close'){
+        this.parentNode.className = 'my_skill_content skills_open'
+    }
+}
+
+skillsHeader.forEach((element) => {
+    element.addEventListener('click', toggleSkills)
+});

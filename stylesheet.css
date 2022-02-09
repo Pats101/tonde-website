@@ -89,7 +89,7 @@ html{
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color: #fff;
+    color: #111;
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
@@ -155,16 +155,27 @@ html{
 }
 
 /* All similar content styling code */
+.container{
+    max-width: 768px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
 section{
     padding: 100px 0;
 }
 
-.about, .skills, .projects, .hobbies, .contact, .myProfile, footer{
+.about, .mySkills, .projects, .hobbies, .contact, .myProfile, footer{
     font-family: 'Poppins', sans-serif;
 }
 
 .about .about-content, 
-.skills .skills-content,
+.mySkills .my_skills,
 .contact .contact-content,
 .myProfile .my-profile-content{
     display: flex;
@@ -258,97 +269,121 @@ section .title::after{
     background: none;
 }
 
-/* Skills section styling */
-.skills .title::after{
+/* MySkills section styling */
+.mySkills .title::after{
     content: "what i know";
 }
 
-.skills .skills-content .column{
-    width: calc(50% - 30px);
+.my_skills_sets{
+    row-gap: 0;
 }
 
-.skills .skills-content .left .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.skills .skills-content .left p{
-    text-align: justify;
-}
-
-.skills .skills-content .left a{
-    display: inline-block;
-    background: #0245aa;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid aqua;
-    transition: all 0.3s ease;
-}
-
-.skills .skills-content .left a:hover{
-    color: #0245aa;
-    background: none;
-}
-
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-
-.skills .skills-content .right .info{
+.skill_header{
     display: flex;
-    margin-bottom: 5px;
     align-items: center;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+}
+
+.skills_icon,
+.skills_arrow{
+    font-size: 2rem;
+    color: #0245aa;
+}
+
+.skills_icon{
+    margin-right: .75rem;
+}
+
+.skills_title{
+    font-size: 1.125rem;
+}
+
+.skills_subtitle{
+    font-size: .813rem;
+    color: #0b46e9;
+}
+
+.skills_arrow{
+    margin-left: auto;
+    transition: 0.4s;
+}
+
+.skills_list{
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+}
+
+.skills_titles{
+    display: flex;
     justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 
-.skills .skills-content .right span{
+.skills_name{
+    font-size: 0.938rem;
     font-weight: 500;
-    font-size: 18px;
 }
 
-.skills .skills-content .right .line{
+.skills_bar,
+.skills_percentage{
     height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
+    border-radius: 0.25rem;
 }
 
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: #317ae7;
+.skills_bar{
+    background-color: #b4b4b4;
 }
 
-.skills-content .right .html::before{
+.skills_percentage{
+    display: block;
+    background-color: aqua;
+}
+
+.skills_html{
     width: 80%;
 }
 
-.skills-content .right .css::before{
-    width: 60%;
-}
-
-.skills-content .right .js::before{
+.skills_css{
     width: 70%;
 }
 
-.skills-content .right .java::before{
-    width: 75%;
-}
-
-.skills-content .right .python::before{
+.skills_js{
     width: 70%;
 }
 
-.skills-content .right .mysql::before{
+.skills_angular{
+    width: 65%;
+}
+
+.skills_mysql{
+    width: 85%;
+}
+
+.skills_nodejs{
+    width: 55%;
+}
+
+.skills_java{
+    width: 70%;
+}
+
+.skills_python{
     width: 75%;
+}
+
+.skills_close .skills_list{
+    height: 0;
+    overflow: hidden;
+}
+
+.skills_open .skills_list{
+    height: max-content;
+    margin-bottom: 2.5rem;
+}
+
+.skills_open .skills_arrow{
+    transform: rotate(-180deg);
 }
 
 /* Projects section styling */
