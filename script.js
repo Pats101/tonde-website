@@ -1,3 +1,7 @@
+const mySection = document.querySelector(".myProfile"),
+        hireBtn = mySection.querySelector("#hireBtn"),
+        closeBtn = mySection.querySelectorAll("#close");
+
 $(document).ready(function(){
     $(window).scroll(function(){
         if(this.scrollY > 20){
@@ -39,3 +43,13 @@ $(document).ready(function(){
         loop: true
     });
 });
+
+hireBtn.addEventListener("click", () =>{
+   mySection.classList.add("show") 
+});
+
+closeBtn.forEach(cBtn => {
+    cBtn.addEventListener("click", () => {
+        mySection.classList.remove("show") 
+    });
+})

@@ -159,13 +159,14 @@ section{
     padding: 100px 0;
 }
 
-.about, .skills, .projects, .hobbies, .contact, footer{
+.about, .skills, .projects, .hobbies, .contact, .myProfile, footer{
     font-family: 'Poppins', sans-serif;
 }
 
 .about .about-content, 
 .skills .skills-content,
-.contact .contact-content{
+.contact .contact-content,
+.myProfile .my-profile-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -468,6 +469,214 @@ section .title::after{
 .contact .right form .button button:hover{
     color: #0245aa;
     background: none;
+}
+
+/* Pop-up Contact section */
+.myProfile{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myProfile .title::after{
+    content: "get in touch";
+}
+
+.myProfile .my-profile{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.myProfile.show .my-profile{
+    display: none;
+}
+
+.myProfile .my-profile p{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.myProfile .my-profile .my-profile-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: #0245aa;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+.my-profile .my-profile-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.my-profile .name,
+.my-profile .profession{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+
+}
+
+.my-profile .profession{
+    font-weight: 400;
+    margin-top: -6px;
+}
+
+.my-profile .button{
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    background: #0245aa;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.my-profile .button:hover{
+    background: #317ae7;
+}
+
+.my-profile .button i{
+    color: #fff;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.my-profile .button button{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+}
+
+.myProfile .popup-outer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    transform: scale(0.8);
+    transition: opacity 0.2s 0s ease-in-out,
+                transform 0.2s 0s ease-in-out;
+}
+
+.myProfile.show .popup-outer{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.myProfile .popup-box{
+    position: relative;
+    padding: 30px;
+    max-width: 380px;
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.popup-box .close{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    color: #b4b4b4;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.popup-box .close:hover{
+    color: #333;
+}
+
+.myProfile .popup-box .my-profile-text{
+    display: flex;
+    align-items: center;
+}
+
+.myProfile .popup-box img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.my-profile-text .text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.my-profile-text .text .name{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.my-profile-text .text .profession{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.myProfile .popup-box textarea{
+    min-height: 140px;
+    width: 100%;
+    margin-top: 20px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 6px;
+    resize: none;
+    font-size: 14px;
+    font-weight: 400;
+    background: #f3f3f3;
+}
+
+.myProfile .popup-box .button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.popup-box .button button{
+    outline: none;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #2364c5;
+    color: #fff;
+    margin-left: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button button.cancel{
+    background: #f082ac;
+}
+
+.button button.cancel:hover{
+    background: #ec5f95;
+}
+
+.button button.send:hover{
+    background: #0b46e9;
 }
 
 /* Footer section styling */
