@@ -1,5 +1,4 @@
-const skillsContent = document.getElementsByClassName('my_skill_content'), 
-        skillsHeader=document.querySelectorAll('.skill_header');
+
 const mySection = document.querySelector(".myProfile"),
         hireBtn = mySection.querySelector("#hireBtn"),
         closeBtn = mySection.querySelectorAll("#close");
@@ -57,6 +56,8 @@ closeBtn.forEach(cBtn => {
 });
 
 // Skills Section
+const skillsContent = document.getElementsByClassName('my_skill_content'), 
+        skillsHeader=document.querySelectorAll('.skill_header');
 function toggleSkills(){
     let itemClass = this.parentNode.className;
     for (p = 0; p < skillsContent.length; p++) {
@@ -69,4 +70,24 @@ function toggleSkills(){
 
 skillsHeader.forEach((element) => {
     element.addEventListener('click', toggleSkills)
-});
+})
+
+// Qualification Section
+const tabs = document.querySelectorAll('[data-target]'),
+        tabContents = document.querySelectorAll('[data-content]')
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.target)
+
+        tabContents.forEach(tabContent => {
+            tabContent.classList.remove('qualification_active')
+        })
+        target.classList.add('qualification_active')
+
+        tabs.forEach(tab => {
+            tab.classList.remove('qualification_active')
+        })
+        tab.classList.add('qualification_active')
+    })
+})
