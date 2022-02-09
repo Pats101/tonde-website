@@ -6,23 +6,31 @@
     <title>Patrick's Website</title>   
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="stylesheet.css">
+    <!-- Typed js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+
+    <!-- Scroll Up Button Feature -->
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>                
-                <li><a href="#hobbies">Hobbies</a></li>                
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#skills" class="menu-btn">Skills</a></li>
+                <li><a href="#projects" class="menu-btn">Projects</a></li>                
+                <li><a href="#hobbies" class="menu-btn">Hobbies</a></li>                
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -36,7 +44,7 @@
             <div class="home-content">
                 <div class="text-1">Hello, my name is </div>
                 <div class="text-2">Patrick Ganhiwa</div>
-                <div class="text-3">And I am a <span>Software Developer</span> </div>
+                <div class="text-3">And I am <span class="typing"></span> </div>
                 <a href="#">Hire Me</a>
             </div>
         </div>
@@ -51,7 +59,7 @@
                     <img src="img/ptg.jpg" alt="">
                 </div>
                 <div class="column right">
-                    <div class="text">I'm Patrick Ganhiwa and I'm a <span>Software Developer</span></div>
+                    <div class="text">I'm Patrick Ganhiwa and I'm <span class="typing-2"></span></div>
                     <p>Developing software that will enable an individual's daily activities seem flow-less is my objective. I have good communication skills
                         with teams, experience in all phases of product development from planning, requirement gathering, to implementing, and testing.</p>
                     <a href="#">Download CV</a>
