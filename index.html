@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patrick's Website</title>   
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- Typed js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <!-- Font Awesome -->
@@ -50,7 +52,7 @@
                 <div class="text-1">Hello, my name is </div>
                 <div class="text-2">Patrick Ganhiwa</div>
                 <div class="text-3">And I am <span class="typing"></span> </div>
-                <a href="#">Hire Me</a>
+                <a href="#contact">Hire Me</a>
             </div>
         </div>
     </section>
@@ -61,13 +63,13 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="img/ptg.jpg" alt="">
+                    <img src="assets/img/ptg.jpg" alt="">
                 </div>
                 <div class="column right">
                     <div class="text">I'm Patrick Ganhiwa and I'm <span class="typing-2"></span></div>
                     <p>Developing software that will enable an individual's daily activities seem flow-less is my objective. I have good communication skills
                         with teams, experience in all phases of product development from planning, requirement gathering, to implementing, and testing.</p>
-                    <a href="#">Download CV</a>
+                    <a download="" href="assets/pdf/PATRICKs Resume.pdf">Download CV <i class="uil uil-download-alt"></i></a>
                 </div>
             </div>
         </div>
@@ -184,7 +186,7 @@
     <section class="myEdu" id="myEdu">
         <div class="max-width">
             <h2 class="title">Qualification</h2>
-            <div class="qualification_container container">
+            <div class="container">
                 <div class="qualification_tabs">
                     <div class="qualification_button button--flex qualification_active" data-target="#education">
                         <i class="uil uil-graduation-cap qualification_icon"></i>
@@ -291,9 +293,57 @@
     </section>
 
     <!-- Projects section -->
-    <section class="projects" id="projects">
+    <section class="projects my_section" id="projects">
         <div class="max-width">
             <div class="title">My Projects</div>
+        </div>
+        <div class="portfolio_container container swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Portfolio 1 -->
+                <div class="portfolio_content grid swiper-slide">
+                    <img src="assets/img/funniJoke.jpg" alt="" class="portfolio_img">
+
+                    <div class="portfolio_data">
+                        <h3 class="portfolio_title">Computer Science Jokes</h3>
+                        <p class="portfolio_description">Generates Computer Science Jokes from an API, and this is adaptable to any mobile device.</p>
+                        <a href="https://pats101.github.io/joke-cracker/" class="button button--flex button--small portfolio_button">
+                            Demo
+                            <i class="uil uil-arrow-right button_icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Portfolio 2 -->
+                <div class="portfolio_content grid swiper-slide">
+                    <img src="assets/img/inspiring.jpg" alt="" class="portfolio_img">
+
+                    <div class="portfolio_data">
+                        <h3 class="portfolio_title">Inspiring Quotes</h3>
+                        <p class="portfolio_description">Generates Inspiring Quotes from an API, and this is adaptable to any mobile device. One can save quotes to their favourites for referencing, just click the grey heart.</p>
+                        <a href="https://pats101.github.io/inspiring-quote-generator/" class="button button--flex button--small portfolio_button">
+                            Demo
+                            <i class="uil uil-arrow-right button_icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Portfolio 3 -->
+                <div class="portfolio_content grid swiper-slide">
+                    <img src="assets/img/brightfuture.jpg" alt="" class="portfolio_img">
+
+                    <div class="portfolio_data">
+                        <h3 class="portfolio_title">My Own CV Web View</h3>
+                        <p class="portfolio_description">A web representation of my CV built from scratch with HTML and CSS. This will show case my skills in html and css through construction. </p>
+                        <a href="https://pats101.github.io/Portfolio/" class="button button--flex button--small portfolio_button">
+                            Demo
+                            <i class="uil uil-arrow-right button_icon"></i>
+                        </a>
+                    </div>
+                </div>                                
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -369,7 +419,7 @@
             <div class="my-profile">
                 <p>Feel free to reach out and I will get back to you as soon as possible to continue our interaction.</p>
                 <div class="my-profile-img">
-                    <img src="img/ptg.jpg" alt="">
+                    <img src="assets/img/ptg.jpg" alt="">
                 </div>
                 <span class="name">Patrick Ganhiwa</span>
                 <span class="profession">Junior Software Developer</span>
@@ -387,7 +437,7 @@
             <div class="popup-box">
                 <i id="close" class="bx bx-x close"></i>
                 <div class="my-profile-text">
-                    <img src="img/ptg.jpg" alt="">
+                    <img src="assets/img/ptg.jpg" alt="">
                     <div class="text">
                         <span class="name">Patrick Ganhiwa</span>
                         <span class="profession">Junior Software Developer</span>
@@ -406,7 +456,9 @@
     <footer>
         <span>Created By <a href="#">Patrick Ganhiwa</a> | <span class="uil uil-copyright"> 2022 All rights reserved.</span></span>
     </footer>
-    <script src="script.js"></script>
+    <!-- Swiper JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
