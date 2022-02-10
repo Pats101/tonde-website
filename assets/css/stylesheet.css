@@ -1128,3 +1128,13 @@ footer span a:hover{
         padding: 0 7.5rem;
     }
 }
+
+@media (max-width: 359px){
+    .portfolio_content{
+        padding: 0 3rem;
+    }
+    
+    .drawings_content{
+        padding: 0 3rem;
+    }
+}
