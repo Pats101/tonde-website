@@ -170,13 +170,17 @@ section{
     padding: 100px 0;
 }
 
+.my_section{
+    padding: 2rem 0 4rem;
+}
+
 .about, .mySkills, .myEdu, .projects, .hobbies, .contact, .myProfile, footer{
     font-family: 'Poppins', sans-serif;
 }
 
 .about .about-content, 
-.mySkills .my_skills,
-.myEdu .myEdu-content,
+.mySkills .my_skills_set,
+.myEdu,
 .contact .contact-content,
 .myProfile .my-profile-content{
     display: flex;
@@ -387,6 +391,13 @@ section .title::after{
     transform: rotate(-180deg);
 }
 
+.mySkills .my_skills_set{
+    margin: 25px;
+    width: 350px;
+    height: 200px;
+    outline: dashed 1px black;
+}
+
 /* My Education section styling */
 .myEdu{
     position: relative;
@@ -396,7 +407,7 @@ section .title::after{
 }
 
 .myEdu .title::after{
-    content: "my personal journey";
+    content: "my journey";
 }
 
 .qualification_tabs{
@@ -472,12 +483,67 @@ section .title::after{
 
 /* Projects section styling */
 .projects .title::after{
-    content: "what i've done";
+    content: "i've done";
+}
+
+.portfolio_container{
+    overflow: initial;
+}
+
+.portfolio_content{
+    padding: 0 16rem;
+}
+
+.portfolio_img{
+    width: 265px;
+    border-radius: .5rem;
+    justify-self: center;
+}
+
+.portfolio_title{
+    font-size: 1.125rem;
+    margin-bottom: .5rem;
+}
+
+.portfolio_description{
+    margin-bottom: 0.75rem;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: aqua;
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullet{
+    outline: none;
+}
+
+.portfolio_container .portfolio_content a{
+    display: inline-block;
+    background: #0245aa;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid aqua;
+    transition: all 0.3s ease;
+}
+
+.portfolio_container .portfolio_content a:hover{
+    color: #0245aa;
+    background: none;
 }
 
 /* Hobbies section styling */
 .hobbies .title::after{
-    content: "what i do for fun";
+    content: "me and fun";
 }
 
 /* Contact section styling */
@@ -827,6 +893,14 @@ footer span a:hover{
     .home .max-width{
         margin-left: 0px;
     }
+
+    .portfolio_container{
+        overflow: initial;
+    }
+    
+    .portfolio_content{
+        padding: 0 22rem;
+    }
 }
 
 @media (max-width: 1104px) {
@@ -834,11 +908,27 @@ footer span a:hover{
         height: 350px;
         width: 350px;
     }
+
+    .portfolio_container{
+        overflow: initial;
+    }
+    
+    .portfolio_content{
+        padding: 0 20.5rem;
+    }
 }
 
 @media (max-width: 991px) {
     .max-width{
         padding: 0 50px;
+    }
+
+    .portfolio_container{
+        overflow: initial;
+    }
+    
+    .portfolio_content{
+        padding: 0 20rem;
     }
 }
 
@@ -914,6 +1004,14 @@ footer span a:hover{
         width: 100%;
         margin-bottom: 35px;
     }
+
+    .portfolio_container{
+        overflow: initial;
+    }
+    
+    .portfolio_content{
+        padding: 0 12rem;
+    }
 }
 
 @media (max-width: 690px){
@@ -936,6 +1034,14 @@ footer span a:hover{
     .skills .skills-content .column{
         width: 100%;
     }
+
+    .portfolio_container{
+        overflow: initial;
+    }
+    
+    .portfolio_content{
+        padding: 0 10rem;
+    }
 }
 
 @media (max-width: 500px){
@@ -949,5 +1055,13 @@ footer span a:hover{
 
     .home .home-content .text-3{
         font-size: 27px;
+    }
+
+    .portfolio_container{
+        overflow: initial;
+    }
+    
+    .portfolio_content{
+        padding: 0 4rem;
     }
 }
