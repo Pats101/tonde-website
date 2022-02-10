@@ -96,7 +96,23 @@ tabs.forEach(tab => {
 let swiper = new Swiper(".portfolio_container", {
     cssMode: true,
     loop: true,
-    
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    mousewheel: true,
+    keyboard: true,
+});
+
+// Drawings Swiper
+let swiper1 = new Swiper(".drawings_container", {
+    cssMode: true,
+    loop: true,
+
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
