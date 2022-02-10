@@ -181,6 +181,7 @@ section{
 .about .about-content, 
 .mySkills .my_skills_set,
 .myEdu,
+.hobbies .drawings_content,
 .contact .contact-content,
 .myProfile .my-profile-content{
     display: flex;
@@ -546,6 +547,20 @@ section .title::after{
     content: "me and fun";
 }
 
+.drawings_container{
+    overflow: initial;
+}
+
+.drawings_content{
+    padding: 0 16rem;
+}
+
+.drawings_img{
+    width: 265px;
+    border-radius: .5rem;
+    justify-self: center;
+}
+
 /* Contact section styling */
 .contact .title::after{
     content: "get in touch";
@@ -899,7 +914,15 @@ footer span a:hover{
     }
     
     .portfolio_content{
-        padding: 0 22rem;
+        padding: 0 16rem;
+    }
+            
+    .drawings_container{
+        overflow: initial;
+    }
+    
+    .drawings_content{
+        padding: 0 16rem;
     }
 }
 
@@ -914,7 +937,15 @@ footer span a:hover{
     }
     
     .portfolio_content{
-        padding: 0 20.5rem;
+        padding: 0 15rem;
+    }
+            
+    .drawings_container{
+        overflow: initial;
+    }
+    
+    .drawings_content{
+        padding: 0 16rem;
     }
 }
 
@@ -928,7 +959,15 @@ footer span a:hover{
     }
     
     .portfolio_content{
-        padding: 0 20rem;
+        padding: 0 16rem;
+    }
+        
+    .drawings_container{
+        overflow: initial;
+    }
+    
+    .drawings_content{
+        padding: 0 16rem;
     }
 }
 
@@ -1012,6 +1051,14 @@ footer span a:hover{
     .portfolio_content{
         padding: 0 12rem;
     }
+    
+    .drawings_container{
+        overflow: initial;
+    }
+    
+    .drawings_content{
+        padding: 0 16rem;
+    }
 }
 
 @media (max-width: 690px){
@@ -1042,6 +1089,14 @@ footer span a:hover{
     .portfolio_content{
         padding: 0 10rem;
     }
+
+    .drawings_container{
+        overflow: initial;
+    }
+    
+    .drawings_content{
+        padding: 0 13.5rem;
+    }
 }
 
 @media (max-width: 500px){
@@ -1063,5 +1118,13 @@ footer span a:hover{
     
     .portfolio_content{
         padding: 0 4rem;
+    }
+
+    .drawings_container{
+        overflow: initial;
+    }
+    
+    .drawings_content{
+        padding: 0 7.5rem;
     }
 }
