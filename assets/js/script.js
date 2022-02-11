@@ -1,7 +1,7 @@
 
-const mySection = document.querySelector(".myProfile"),
-        hireBtn = mySection.querySelector("#hireBtn"),
-        closeBtn = mySection.querySelectorAll("#close");
+// const mySection = document.querySelector(".myProfile"),
+//         hireBtn = mySection.querySelector("#hireBtn"),
+//         closeBtn = mySection.querySelectorAll("#close");
 
 $(document).ready(function(){
     $(window).scroll(function(){
@@ -45,15 +45,15 @@ $(document).ready(function(){
     });
 });
 
-hireBtn.addEventListener("click", () =>{
-   mySection.classList.add("show") 
-});
+// hireBtn.addEventListener("click", () =>{
+//    mySection.classList.add("show") 
+// });
 
-closeBtn.forEach(cBtn => {
-    cBtn.addEventListener("click", () => {
-        mySection.classList.remove("show") 
-    });
-});
+// closeBtn.forEach(cBtn => {
+//     cBtn.addEventListener("click", () => {
+//         mySection.classList.remove("show") 
+//     });
+// });
 
 // Skills Section
 const skillsContent = document.getElementsByClassName('my_skill_content'), 
