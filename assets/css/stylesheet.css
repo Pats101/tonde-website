@@ -1151,3 +1151,15 @@ footer span a:hover{
         padding: 0 3.5rem;
     }
 }
+
+@media (max-width: 296px){    
+    .drawings_img{
+        width: 200px;
+        border-radius: .5rem;
+        justify-self: center;
+    }
+
+    .drawings_content{
+        padding: 0 3rem;
+    }
+}
