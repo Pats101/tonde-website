@@ -544,7 +544,7 @@ section .title::after{
 
 /* Hobbies section styling */
 .hobbies .title::after{
-    content: "me and fun";
+    content: "fun in me";
 }
 
 .drawings_container{
