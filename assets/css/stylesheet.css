@@ -1129,12 +1129,25 @@ footer span a:hover{
     }
 }
 
-@media (max-width: 359px){
+@media (max-width: 368px){
+
+    .portfolio_img{
+        width: 250px;
+        border-radius: .5rem;
+        justify-self: center;
+    }
+
     .portfolio_content{
-        padding: 0 3rem;
+        padding: 0 0.5rem;
     }
     
+    .drawings_img{
+        width: 250px;
+        border-radius: .5rem;
+        justify-self: center;
+    }
+
     .drawings_content{
-        padding: 0 3rem;
+        padding: 0 4rem;
     }
 }
