@@ -355,11 +355,15 @@ section .title::after{
 }
 
 .skills_js{
-    width: 70%;
+    width: 80%;
 }
 
 .skills_angular{
     width: 65%;
+}
+
+.skills_vue{
+    width: 50%;
 }
 
 .skills_mysql{
@@ -371,11 +375,15 @@ section .title::after{
 }
 
 .skills_java{
-    width: 70%;
+    width: 65%;
 }
 
 .skills_python{
     width: 75%;
+}
+
+.skills_csharp{
+    width: 85%;
 }
 
 .skills_close .skills_list{
