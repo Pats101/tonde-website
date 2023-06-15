@@ -30,7 +30,7 @@ $(document).ready(function(){
 
     // typing animation script
     var typed = new Typed(".typing", {
-        strings: ["a Software Developer", "always Developing", "a Pencil Artist"],
+        strings: ["a Software Engineer", "always Engineering and Developing", "a Pencil Artist"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -38,7 +38,7 @@ $(document).ready(function(){
 
     // typing animation script
     var typed = new Typed(".typing-2", {
-        strings: ["a Software Developer", "always Developing", "a Pencil Artist"],
+        strings: ["a Software Engineer", "always Engineering and Developing", "a Pencil Artist"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
