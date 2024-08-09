@@ -478,6 +478,14 @@ section .title::after{
     transform: translate(6px, -7px);
 }
 
+.qualification_dotted_line{
+    display: block;
+    width: 1px;
+    height: 85%;
+    background-color: #96e296;
+    transform: translate(6px, -7px);
+}
+
 .myEdu [data-content]{
     display: none;
 }
