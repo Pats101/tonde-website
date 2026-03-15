@@ -469,57 +469,81 @@
     </section>
 
     <!-- Projects section -->
-    <section class="projects my_section scroll-reveal" id="projects">
+    <section class="projects scroll-reveal" id="projects">
         <div class="max-width">
             <h2 class="title" data-i18n="projects.title">My Projects</h2>
-        </div>
-        <div class="portfolio_container container swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Portfolio 1 -->
-                <div class="portfolio_content grid swiper-slide">
-                    <img src="assets/img/funniJoke.jpg" alt="Computer Science Jokes app screenshot" class="portfolio_img" loading="lazy">
-
-                    <div class="portfolio_data">
-                        <h3 class="portfolio_title" data-i18n="projects.jokes.title">Computer Science Jokes</h3>
-                        <p class="portfolio_description" data-i18n="projects.jokes.desc">Generates Computer Science Jokes from an API.</p>
-                        <a href="https://pats101.github.io/joke-cracker/" class="button button--flex button--small portfolio_button">
-                            Demo
-                            <i class="uil uil-arrow-right button_icon"></i>
+            <p class="projects-subtitle">Personal and side projects I've built to explore ideas and sharpen my skills.</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-img">
+                        <img src="assets/img/funniJoke.jpg" alt="Computer Science Jokes app screenshot" loading="lazy">
+                        <div class="project-card-overlay">
+                            <a href="https://pats101.github.io/joke-cracker/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View live demo">
+                                <i class="uil uil-external-link-alt" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Pats101/joke-cracker" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code">
+                                <i class="uil uil-github-alt" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 data-i18n="projects.jokes.title">Computer Science Jokes</h3>
+                        <p data-i18n="projects.jokes.desc">Generates Computer Science Jokes from an API. A fun way to learn API integration and DOM manipulation.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span><span>HTML</span><span>CSS</span><span>REST API</span>
+                        </div>
+                        <a href="https://pats101.github.io/joke-cracker/" target="_blank" rel="noopener noreferrer" class="project-demo-btn">
+                            Live Demo <i class="uil uil-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
-                <!-- Portfolio 2 -->
-                <div class="portfolio_content grid swiper-slide">
-                    <img src="assets/img/inspiring.jpg" alt="Inspiring Quotes app screenshot" class="portfolio_img" loading="lazy">
-
-                    <div class="portfolio_data">
-                        <h3 class="portfolio_title" data-i18n="projects.quotes.title">Inspiring Quotes</h3>
-                        <p class="portfolio_description" data-i18n="projects.quotes.desc">Generates Inspiring Quotes from an API. Just click the grey heart to save quote.</p>
-                        <a href="https://pats101.github.io/inspiring-quote-generator/" class="button button--flex button--small portfolio_button">
-                            Demo
-                            <i class="uil uil-arrow-right button_icon"></i>
+                <div class="project-card">
+                    <div class="project-card-img">
+                        <img src="assets/img/inspiring.jpg" alt="Inspiring Quotes app screenshot" loading="lazy">
+                        <div class="project-card-overlay">
+                            <a href="https://pats101.github.io/inspiring-quote-generator/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View live demo">
+                                <i class="uil uil-external-link-alt" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Pats101/inspiring-quote-generator" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code">
+                                <i class="uil uil-github-alt" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 data-i18n="projects.quotes.title">Inspiring Quotes</h3>
+                        <p data-i18n="projects.quotes.desc">Generates inspiring quotes from an API with a save-to-favorites feature using local storage.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span><span>HTML</span><span>CSS</span><span>LocalStorage</span>
+                        </div>
+                        <a href="https://pats101.github.io/inspiring-quote-generator/" target="_blank" rel="noopener noreferrer" class="project-demo-btn">
+                            Live Demo <i class="uil uil-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
-                <!-- Portfolio 3 -->
-                <div class="portfolio_content grid swiper-slide">
-                    <img src="assets/img/brightfuture.jpg" alt="CV Web View project screenshot" class="portfolio_img" loading="lazy">
-
-                    <div class="portfolio_data">
-                        <h3 class="portfolio_title" data-i18n="projects.cv.title">My Own CV Web View</h3>
-                        <p class="portfolio_description" data-i18n="projects.cv.desc">HTML and CSS representation of my CV built from scratch.</p>
-                        <a href="https://pats101.github.io/Portfolio/" class="button button--flex button--small portfolio_button">
-                            Demo
-                            <i class="uil uil-arrow-right button_icon"></i>
+                <div class="project-card">
+                    <div class="project-card-img">
+                        <img src="assets/img/brightfuture.jpg" alt="CV Web View project screenshot" loading="lazy">
+                        <div class="project-card-overlay">
+                            <a href="https://pats101.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View live demo">
+                                <i class="uil uil-external-link-alt" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/Pats101/Portfolio" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code">
+                                <i class="uil uil-github-alt" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 data-i18n="projects.cv.title">My Own CV Web View</h3>
+                        <p data-i18n="projects.cv.desc">HTML and CSS representation of my CV built from scratch. Responsive and print-friendly.</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>Responsive</span>
+                        </div>
+                        <a href="https://pats101.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" class="project-demo-btn">
+                            Live Demo <i class="uil uil-arrow-right" aria-hidden="true"></i>
                         </a>
                     </div>
-                </div>                                
+                </div>
             </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- Add Pagination -->
-            <!-- <div class="swiper-pagination"></div> -->
         </div>
     </section>
 
