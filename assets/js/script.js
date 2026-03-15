@@ -10,34 +10,30 @@ $(document).ready(function(){
         } else {
             $('.navbar').removeClass("sticky");
         } 
-        if(this.scroll > 500){
+        if(this.scrollY > 500){
             $('.scroll-up-btn').addClass("show");
         }else{
             $('.scroll-up-btn').removeClass("show");
         }
     });
 
-    // Slide-up script
-    $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
-    });
-
     // Toggle menu/navbar script
-    $('.menu-btn').click(function(){
+    $('button.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
+        var expanded = $('.navbar .menu').hasClass('active');
+        $(this).attr('aria-expanded', expanded);
     });
 
     // typing animation script
-    var typed = new Typed(".typing", {
+    const typedHome = new Typed(".typing", {
         strings: ["a Software Engineer", "always Engineering and Developing", "a Pencil Artist"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
-    // typing animation script
-    var typed = new Typed(".typing-2", {
+    const typedAbout = new Typed(".typing-2", {
         strings: ["a Software Engineer", "always Engineering and Developing", "a Pencil Artist"],
         typeSpeed: 100,
         backSpeed: 60,
@@ -60,7 +56,7 @@ const skillsContent = document.getElementsByClassName('my_skill_content'),
         skillsHeader=document.querySelectorAll('.skill_header');
 function toggleSkills(){
     let itemClass = this.parentNode.className;
-    for (p = 0; p < skillsContent.length; p++) {
+    for (let p = 0; p < skillsContent.length; p++) {
         skillsContent[p].className = 'my_skill_content skills_close';        
     }
     if(itemClass === 'my_skill_content skills_close'){
@@ -93,13 +89,13 @@ tabs.forEach(tab => {
 });
 
 // Portfolio Swiper
-let swiper = new Swiper(".portfolio_container", {
+const swiperPortfolio = new Swiper(".portfolio_container", {
     cssMode: true,
     loop: true,
 
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".portfolio_container .swiper-button-next",
+      prevEl: ".portfolio_container .swiper-button-prev",
     },
     pagination: {
       el: ".swiper-pagination",
@@ -108,14 +104,45 @@ let swiper = new Swiper(".portfolio_container", {
     keyboard: true,
 });
 
+// Contact Form Submission
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = new FormData(contactForm);
+
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+            formStatus.style.display = 'block';
+            if (response.ok) {
+                formStatus.textContent = 'Message sent successfully!';
+                formStatus.style.color = '#0245aa';
+                contactForm.reset();
+            } else {
+                formStatus.textContent = 'Something went wrong. Please try again.';
+                formStatus.style.color = '#e74c3c';
+            }
+        }).catch(function() {
+            formStatus.style.display = 'block';
+            formStatus.textContent = 'Something went wrong. Please try again.';
+            formStatus.style.color = '#e74c3c';
+        });
+    });
+}
+
 // Drawings Swiper
-let swiper1 = new Swiper(".drawings_container", {
+const swiperDrawings = new Swiper(".drawings_container", {
     cssMode: true,
     loop: true,
 
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".drawings_container .swiper-button-next",
+      prevEl: ".drawings_container .swiper-button-prev",
     },
     pagination: {
       el: ".swiper-pagination",
