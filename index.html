@@ -463,57 +463,56 @@
     <section class="contact scroll-reveal" id="contact">
         <div class="max-width">
             <h2 class="title">Contact Me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>Feel free to reach out. Please, send me a message and I will get back to you as soon as possible to continue our interaction.</p>
-                    <div class="icons">
-                        <div class="row">
-                            <i class="uil uil-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Patrick Ganhiwa</div>
-                            </div>
+            <p class="contact-subtitle">Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+            <div class="contact-cards">
+                <a href="mailto:ptganhiwa8@gmail.com" class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="uil uil-envelope-alt" aria-hidden="true"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>ganhiwapatricktonde8@gmail.com</p>
+                </a>
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="uil uil-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Cape Town, Western Cape</p>
+                </div>
+                <a href="https://github.com/Pats101" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="uil uil-github-alt" aria-hidden="true"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Pats101</p>
+                </a>
+            </div>
+            <div class="contact-form-wrapper">
+                <h3 class="contact-form-heading">Send me a message</h3>
+                <form action="https://formspree.io/f/mqeydbwd" method="POST" id="contact-form">
+                    <div class="contact-form-grid">
+                        <div class="contact-form-field">
+                            <input type="text" name="name" placeholder=" " aria-label="Your name" id="contact-name" required>
+                            <label for="contact-name">Name</label>
                         </div>
-                        <div class="row">
-                            <i class="uil uil-map-marker"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title">Western Cape, Cape Town</div>
-                            </div>
-                        </div>
-                        <div class="row">                            
-                            <i class="uil uil-envelope-alt"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">ptganhiwa8@gmail.com</div>
-                            </div>
+                        <div class="contact-form-field">
+                            <input type="email" name="email" placeholder=" " aria-label="Your email address" id="contact-email" required>
+                            <label for="contact-email">Email</label>
                         </div>
                     </div>
-                </div>
-                <div class="column right">
-                    <div class="text">Message Me</div>
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" name="name" placeholder="Name" aria-label="Your name" required>
-                            </div>
-                            <div class="field email">
-                                <input type="email" name="email" placeholder="Email" aria-label="Your email address" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" name="subject" placeholder="Subject" aria-label="Message subject" required>
-                        </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" name="message" placeholder="Describe project.." aria-label="Your message" required></textarea>
-                        </div>
-                        <div class="button">
-                            <button type="submit">Send Message</button>
-                        </div>
-                        <p id="form-status" role="status" aria-live="polite"></p>
-                    </form>
-                </div>
+                    <div class="contact-form-field">
+                        <input type="text" name="subject" placeholder=" " aria-label="Message subject" id="contact-subject" required>
+                        <label for="contact-subject">Subject</label>
+                    </div>
+                    <div class="contact-form-field">
+                        <textarea name="message" rows="5" placeholder=" " aria-label="Your message" id="contact-message" required></textarea>
+                        <label for="contact-message">Message</label>
+                    </div>
+                    <button type="submit" class="contact-submit-btn">
+                        Send Message <i class="uil uil-message" aria-hidden="true"></i>
+                    </button>
+                    <p id="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </div>
     </section>
