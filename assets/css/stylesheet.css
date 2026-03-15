@@ -79,6 +79,12 @@ html{
     display: none;
 }
 
+button.menu-btn{
+    background: none;
+    border: none;
+    padding: 0;
+}
+
 /* Scroll up button styling */
 .scroll-up-btn{
     position: fixed;
@@ -95,10 +101,14 @@ html{
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .scroll-up-btn.show{
     bottom: 30px;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 /* Home section */
@@ -303,6 +313,7 @@ section .title::after{
 
 .skills_title{
     font-size: 1.125rem;
+    margin: 0;
 }
 
 .skills_subtitle{
@@ -431,7 +442,7 @@ section .title::after{
     cursor: pointer;
 }
 
-.qualifiaction_button:hover{
+.qualification_button:hover{
     color: #0245aa;
 }
 
@@ -685,6 +696,11 @@ section .title::after{
 .contact .right form .button button:hover{
     color: #0245aa;
     background: none;
+}
+
+#form-status{
+    margin-top: 10px;
+    display: none;
 }
 
 /* Pop-up Contact section */

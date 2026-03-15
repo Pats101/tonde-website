@@ -1,9 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick's Website</title>   
+    <title>Patrick Ganhiwa — Software Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Patrick Ganhiwa, a Software Developer based in Cape Town. Showcasing skills in C#, Java, Python, JavaScript, Angular, and Vue 3.">
+    <meta name="author" content="Patrick Ganhiwa">
+    <meta name="keywords" content="Patrick Ganhiwa, Software Developer, Portfolio, Cape Town, C#, Java, Python, JavaScript, Angular, Vue">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Patrick Ganhiwa — Software Developer Portfolio">
+    <meta property="og:description" content="Software Developer based in Cape Town. Showcasing skills in C#, Java, Python, JavaScript, Angular, and Vue 3.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pats101.github.io/tonde-website/">
+    <meta property="og:image" content="https://pats101.github.io/tonde-website/assets/img/ptg.jpg">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Patrick Ganhiwa — Software Developer Portfolio">
+    <meta name="twitter:description" content="Software Developer based in Cape Town. Skills in C#, Java, Python, JavaScript, Angular, and Vue 3.">
+    <meta name="twitter:image" content="https://pats101.github.io/tonde-website/assets/img/ptg.jpg">
+    <link rel="canonical" href="https://pats101.github.io/tonde-website/">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
     <!-- Swiper CSS -->
@@ -21,13 +36,12 @@
 </head>
 <body>
 
-    <!-- Scroll Up Button Feature -->
-    <div class="scroll-up-btn">
-        <i class="uil uil-angle-double-up"></i>
-    </div>
+    <a href="#home" class="scroll-up-btn" aria-label="Scroll to top">
+        <i class="uil uil-angle-double-up" aria-hidden="true"></i>
+    </a>
 
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="max-width">
             <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
             <ul class="menu">
@@ -35,13 +49,13 @@
                 <li><a href="#about" class="menu-btn">About</a></li>
                 <li><a href="#mySkills" class="menu-btn">Skills</a></li>
                 <li><a href="#myEdu" class="menu-btn">Qualification</a></li>
-                <li><a href="#projects" class="menu-btn">Projects</a></li>                
-                <li><a href="#hobbies" class="menu-btn">Hobbies</a></li>                
+                <li><a href="#projects" class="menu-btn">Projects</a></li>
+                <li><a href="#hobbies" class="menu-btn">Hobbies</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
-            <div class="menu-btn">
-                <i class="uil uil-bars"></i>
-            </div>
+            <button class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="uil uil-bars" aria-hidden="true"></i>
+            </button>
         </div>
     </nav>
 
@@ -50,7 +64,7 @@
         <div class="max-width">
             <div class="home-content">
                 <div class="text-1">Hello, my name is </div>
-                <div class="text-2">Patrick Ganhiwa</div>
+                <h1 class="text-2">Patrick Ganhiwa</h1>
                 <div class="text-3">And I am <span class="typing"></span> </div>
                 <a href="#contact">Hire Me</a>
             </div>
@@ -63,13 +77,13 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="assets/img/ptg.jpg" alt="">
+                    <img src="assets/img/ptg.jpg" alt="Patrick Ganhiwa profile photo">
                 </div>
                 <div class="column right">
                     <div class="text">I'm Patrick Ganhiwa and I'm <span class="typing-2"></span></div>
                     <p>Engineering and Developing software that will enable an individual's daily activities seem flawless is my objective. I have good communication skills
                         with teams, experience in all phases of product development from planning, requirement gathering, to implementing, and testing.</p>
-                    <a download="" href="assets/pdf/PATRICKs Resume.pdf">Download CV <i class="uil uil-download-alt"></i></a>
+                    <a download="" href="assets/pdf/PATRICKs Resume.pdf" aria-label="Download Patrick Ganhiwa's CV as PDF">Download CV <i class="uil uil-download-alt" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -85,7 +99,7 @@
                     <div class="skill_header">
                         <i class="uil uil-brackets-curly skills_icon"></i>
                         <div>
-                            <h1 class="skills_title">Frontend Developer</h1>
+                            <h3 class="skills_title">Frontend Developer</h3>
                             <span class="skills_subtitle">3+ years work Experience</span>
                         </div>
                         <i class="uil uil-angle-down skills_arrow"></i>
@@ -143,7 +157,7 @@
                     <div class="skill_header">
                         <i class="uil uil-server-network skills_icon"></i>
                         <div>
-                            <h1 class="skills_title">Backend Developer</h1>
+                            <h3 class="skills_title">Backend Developer</h3>
                             <span class="skills_subtitle">3+ years work Experience</span>
                         </div>
                         <i class="uil uil-angle-down skills_arrow"></i>
@@ -292,7 +306,7 @@
                         <!-- Qualification Data 2 -->
                         <div class="qualification_data">                            
                             <div>
-                                <h3 class="qualification_title">Junior Softaware Developer (Java)</h3>
+                                <h3 class="qualification_title">Junior Software Developer (Java)</h3>
                                 <span class="qualification_subtitle">Clickatell - Cape Town</span>
                                 <div class="qualification_calendar">
                                     <i class="uil uil-calendar-alt"></i>
@@ -325,7 +339,7 @@
                         <!-- Qualification Data 4 -->
                         <div class="qualification_data">                            
                             <div>
-                                <h3 class="qualification_title">Softaware Developer (C#)</h3>
+                                <h3 class="qualification_title">Software Developer (C#)</h3>
                                 <span class="qualification_subtitle">Knowledge Translation Unit - Cape Town</span>
                                 <div class="qualification_calendar">
                                     <i class="uil uil-calendar-alt"></i>
@@ -346,13 +360,13 @@
     <!-- Projects section -->
     <section class="projects my_section" id="projects">
         <div class="max-width">
-            <div class="title">My Projects</div>
+            <h2 class="title">My Projects</h2>
         </div>
         <div class="portfolio_container container swiper mySwiper">
             <div class="swiper-wrapper">
                 <!-- Portfolio 1 -->
                 <div class="portfolio_content grid swiper-slide">
-                    <img src="assets/img/funniJoke.jpg" alt="" class="portfolio_img">
+                    <img src="assets/img/funniJoke.jpg" alt="Computer Science Jokes app screenshot" class="portfolio_img" loading="lazy">
 
                     <div class="portfolio_data">
                         <h3 class="portfolio_title">Computer Science Jokes</h3>
@@ -365,7 +379,7 @@
                 </div>
                 <!-- Portfolio 2 -->
                 <div class="portfolio_content grid swiper-slide">
-                    <img src="assets/img/inspiring.jpg" alt="" class="portfolio_img">
+                    <img src="assets/img/inspiring.jpg" alt="Inspiring Quotes app screenshot" class="portfolio_img" loading="lazy">
 
                     <div class="portfolio_data">
                         <h3 class="portfolio_title">Inspiring Quotes</h3>
@@ -378,7 +392,7 @@
                 </div>
                 <!-- Portfolio 3 -->
                 <div class="portfolio_content grid swiper-slide">
-                    <img src="assets/img/brightfuture.jpg" alt="" class="portfolio_img">
+                    <img src="assets/img/brightfuture.jpg" alt="CV Web View project screenshot" class="portfolio_img" loading="lazy">
 
                     <div class="portfolio_data">
                         <h3 class="portfolio_title">My Own CV Web View</h3>
@@ -401,37 +415,37 @@
     <!-- Hobbies section -->
     <section class="hobbies" id="hobbies">
         <div class="max-width">
-            <div class="title">My Hobbies</div>
+            <h2 class="title">My Hobbies</h2>
         </div>
         <div class="drawings_container container swiper mySwiper">
             <div class="swiper-wrapper">
                 <!-- Drawing 1 -->
                 <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/lemon_splash.jpg" alt="" class="drawings_img">
+                    <img src="assets/img/drawings/lemon_splash.jpg" alt="Pencil drawing of a lemon splash" class="drawings_img" loading="lazy">
                 </div>
                 <!-- Drawing 2 -->
                 <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/bloody_rose.png" alt="" class="drawings_img">
+                    <img src="assets/img/drawings/bloody_rose.png" alt="Pencil drawing of a rose with red accents" class="drawings_img" loading="lazy">
                 </div>
                 <!-- Drawing 3 -->
                 <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/red_girl.jpg" alt="" class="drawings_img">
+                    <img src="assets/img/drawings/red_girl.jpg" alt="Pencil portrait drawing with red highlights" class="drawings_img" loading="lazy">
                 </div>
                 <!-- Drawing 4 -->
                 <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/belhar.jpg" alt="" class="drawings_img">
+                    <img src="assets/img/drawings/belhar.jpg" alt="Pencil drawing of Belhar scenery" class="drawings_img" loading="lazy">
                 </div>
                 <!-- Drawing 5 -->
                 <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/caroline.jpg" alt="" class="drawings_img">
+                    <img src="assets/img/drawings/caroline.jpg" alt="Pencil portrait drawing of Caroline" class="drawings_img" loading="lazy">
                 </div>
                 <!-- Drawing 6 -->
                 <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/baby_sweet_corn.jpg" alt="" class="drawings_img">
+                    <img src="assets/img/drawings/baby_sweet_corn.jpg" alt="Pencil drawing of baby sweet corn" class="drawings_img" loading="lazy">
                 </div>
                 <!-- Drawing 7 -->
                 <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/pain.jpg" alt="" class="drawings_img">
+                    <img src="assets/img/drawings/pain.jpg" alt="Pencil drawing depicting pain" class="drawings_img" loading="lazy">
                 </div>                                                                                                
             </div>
             <div class="swiper-button-next"></div>
@@ -474,24 +488,25 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message Me</div>
-                    <form action="#">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" name="name" placeholder="Name" aria-label="Your name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" name="email" placeholder="Email" aria-label="Your email address" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" aria-label="Message subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Describe project.." required></textarea>
+                            <textarea cols="30" rows="10" name="message" placeholder="Describe project.." aria-label="Your message" required></textarea>
                         </div>
                         <div class="button">
                             <button type="submit">Send Message</button>
                         </div>
+                        <p id="form-status" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
@@ -538,12 +553,10 @@
 
     <!-- Footer section -->
     <footer>
-        <span>Created By <a href="#">Patrick Ganhiwa</a> | <span class="uil uil-copyright"> 2022 All rights reserved.</span></span>
+        <span>Created By <a href="#">Patrick Ganhiwa</a> | <span class="uil uil-copyright"> 2024 All rights reserved.</span></span>
     </footer>
     <!-- Swiper JS -->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
