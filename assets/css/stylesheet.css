@@ -1715,11 +1715,6 @@ footer span a:hover{
     .home .max-width{
         margin-left: 0px;
     }
-
-    .portfolio_container{
-        overflow: initial;
-    }
-    
 }
 
 @media (max-width: 1104px) {
@@ -1871,14 +1866,6 @@ footer span a:hover{
 
     .contact-form-grid{
         grid-template-columns: 1fr;
-    }
-
-    .portfolio_container{
-        overflow: initial;
-    }
-
-    .portfolio_content{
-        padding: 0 12rem;
     }
 
 }
