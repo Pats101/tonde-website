@@ -342,143 +342,137 @@
         </div>
     </section>
 
-    <!-- My Education section -->
+    <!-- Qualification section -->
     <section class="myEdu scroll-reveal" id="myEdu">
         <div class="max-width">
             <h2 class="title" data-i18n="qual.title">Qualification</h2>
-            <div class="container">
-                <div class="qualification_tabs">
-                    <div class="qualification_button button--flex qualification_active" data-target="#education">
-                        <i class="uil uil-graduation-cap qualification_icon"></i>
-                        <span data-i18n="qual.education">Education</span>
+            <div class="qual-tabs">
+                <button class="qual-tab qual-tab--active" data-target="#education" aria-label="Show education">
+                    <i class="uil uil-graduation-cap" aria-hidden="true"></i>
+                    <span data-i18n="qual.education">Education</span>
+                </button>
+                <button class="qual-tab" data-target="#work" aria-label="Show work experience">
+                    <i class="uil uil-briefcase-alt" aria-hidden="true"></i>
+                    <span data-i18n="qual.work">Work</span>
+                </button>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="qual-timeline qual-timeline--active" data-content id="education">
+                <!-- <div class="qual-item qual-item--left">
+                    <div class="qual-card qual-card--active">
+                        <div class="qual-card-header">
+                            <div class="qual-icon qual-icon--active"><i class="uil uil-graduation-cap" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>MSc Computer Science</h3>
+                                <p class="qual-company">University of the Western Cape, Cape Town</p>
+                                <span class="qual-date">2020 - Present</span>
+                            </div>
+                        </div>
+                        <p class="qual-desc">Research focused on AI-driven knowledge discovery and intelligent document processing systems.</p>
+                        <div class="qual-tags">
+                            <span>AI</span><span>NLP</span><span>Python</span><span>Machine Learning</span>
+                        </div>
                     </div>
-                    <div class="qualification_button button--flex" data-target="#work">
-                        <i class="uil uil-briefcase-alt qualification_icon"></i>
-                        <span data-i18n="qual.work">Work</span>
+                </div> -->
+                <div class="qual-item qual-item--right">
+                    <div class="qual-card">
+                        <div class="qual-card-header">
+                            <div class="qual-icon"><i class="uil uil-graduation-cap" aria-hidden="true"></i></div>
+                            <div>
+                                <h3>BSc Honours Computer Science</h3>
+                                <p class="qual-company">University of the Western Cape, Cape Town</p>
+                                <span class="qual-date">2019</span>
+                            </div>
+                        </div>
+                        <p class="qual-desc">Advanced research in cybersecurity, threat intelligence, and information sharing platforms.</p>
+                        <div class="qual-tags">
+                            <span>Cybersecurity</span><span>MISP</span><span>Research</span><span>Python</span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="qualification_sections">
-                    <!-- Qualification Content 1 -->
-                    <div class="qualification_content qualification_active" data-content id="education">
-                        <!-- Qualification Data 1 -->
-                        <div class="qualification_data">
+                <div class="qual-item qual-item--left">
+                    <div class="qual-card">
+                        <div class="qual-card-header">
+                            <div class="qual-icon"><i class="uil uil-graduation-cap" aria-hidden="true"></i></div>
                             <div>
-                                <h3 class="qualification_title">Bachelor of Science Computer Science</h3>
-                                <span class="qualification_subtitle">University of the Western Cape - Cape Town</span>
-                                <div class="qualification_calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2015 - 2018 <i class="uil uil-check-circle"></i>
-                                </div>                                
-                            </div>
-
-                            <div>
-                                <span class="qualification_rounder"></span>
-                                <span class="qualification_line"></span>
+                                <h3>Bachelor of Science Computer Science</h3>
+                                <p class="qual-company">University of the Western Cape, Cape Town</p>
+                                <span class="qual-date">2015 - 2018</span>
                             </div>
                         </div>
-                        <!-- Qualification Data 2 -->
-                        <div class="qualification_data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification_rounder"></span>
-                                <span class="qualification_line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification_title">Bachelor of Science Honours Computer Science</h3>
-                                <span class="qualification_subtitle">University of the Western Cape - Cape Town</span>
-                                <div class="qualification_calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2019 - 2019 <i class="uil uil-check-circle"></i>
-                                </div>
-                            </div>
+                        <p class="qual-desc">Foundations in algorithms, data structures, software engineering, and computer architecture.</p>
+                        <div class="qual-tags">
+                            <span>Java</span><span>Algorithms</span><span>Data Structures</span><span>SQL</span>
                         </div>
-                        <!-- Qualification Data 3 -->
-                        <div class="qualification_data">
-                            <div>
-                                <h3 class="qualification_title">Bachelor of Science Masters Computer Science</h3>
-                                <span class="qualification_subtitle">University of the Western Cape - Cape</span>
-                                <div class="qualification_calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2020 - in progress ...
-                                </div>
-                            </div>
-                            <div>
-                                <span class="qualification_rounder"></span>
-                                <!-- <span class="qualification_line"></span> -->
-                            </div>
-                        </div>                        
                     </div>
-                    <!-- Qualification Content 2 -->
-                    <div class="qualification_content" data-content id="work">
-                        <!-- Qualification Data 1 -->
-                        <div class="qualification_data">
-                            <div></div>
+                </div>
+            </div>
 
+            <!-- Work Timeline -->
+            <div class="qual-timeline" data-content id="work">
+                <div class="qual-item qual-item--left">
+                    <div class="qual-card qual-card--active">
+                        <div class="qual-card-header">
+                            <div class="qual-icon qual-icon--active"><i class="uil uil-building" aria-hidden="true"></i></div>
                             <div>
-                                <span class="qualification_rounder"></span>
-                                <span class="qualification_line"></span>
-                            </div>                            
-
-                            <div>
-                                <h3 class="qualification_title">Software Developer Graduate Intern (Java)</h3>
-                                <span class="qualification_subtitle">Clickatell - Cape Town</span>
-                                <div class="qualification_calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2020 - 2020 <i class="uil uil-check-circle"></i>
-                                </div>                                
+                                <h3>Software Developer</h3>
+                                <p class="qual-company">Knowledge Translation Unit, Cape Town</p>
+                                <span class="qual-date">2024 - Present</span>
                             </div>
                         </div>
-                        <!-- Qualification Data 2 -->
-                        <div class="qualification_data">                            
+                        <p class="qual-desc">Building healthcare data platforms and AI-enabled systems for clinical research and knowledge discovery.</p>
+                        <div class="qual-tags">
+                            <span>C#</span><span>.NET</span><span>Python</span><span>AI</span><span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="qual-item qual-item--right">
+                    <div class="qual-card">
+                        <div class="qual-card-header">
+                            <div class="qual-icon"><i class="uil uil-building" aria-hidden="true"></i></div>
                             <div>
-                                <h3 class="qualification_title">Junior Software Developer (Java)</h3>
-                                <span class="qualification_subtitle">Clickatell - Cape Town</span>
-                                <div class="qualification_calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2021 - 2021 <i class="uil uil-check-circle"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="qualification_rounder"></span>
-                                <span class="qualification_dotted_line"></span>
+                                <h3>Software Engineer</h3>
+                                <p class="qual-company">Synthesis, Cape Town</p>
+                                <span class="qual-date">2022 - 2024</span>
                             </div>
                         </div>
-                        <!-- Qualification Data 3 -->
-                        <div class="qualification_data">
-                            <div></div>
-
+                        <p class="qual-desc">Designed and built enterprise-grade backend systems for financial services clients using .NET and cloud infrastructure.</p>
+                        <div class="qual-tags">
+                            <span>C#</span><span>.NET</span><span>Azure</span><span>SQL Server</span><span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="qual-item qual-item--left">
+                    <div class="qual-card">
+                        <div class="qual-card-header">
+                            <div class="qual-icon"><i class="uil uil-building" aria-hidden="true"></i></div>
                             <div>
-                                <span class="qualification_rounder"></span>
-                                <span class="qualification_dotted_line"></span>
-                            </div>                            
-
-                            <div>
-                                <h3 class="qualification_title">Software Engineer (C#)</h3>
-                                <span class="qualification_subtitle">Synthesis - Cape Town</span>
-                                <div class="qualification_calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2022 - 2024 <i class="uil uil-check-circle"></i>
-                                </div>                                
+                                <h3>Junior Software Developer</h3>
+                                <p class="qual-company">Clickatell, Cape Town</p>
+                                <span class="qual-date">2021</span>
                             </div>
-                        </div>    
-                        <!-- Qualification Data 4 -->
-                        <div class="qualification_data">                            
+                        </div>
+                        <p class="qual-desc">Contributed to backend services for high-throughput messaging systems and API integrations.</p>
+                        <div class="qual-tags">
+                            <span>Java</span><span>Microservices</span><span>Docker</span><span>Kafka</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="qual-item qual-item--right">
+                    <div class="qual-card">
+                        <div class="qual-card-header">
+                            <div class="qual-icon"><i class="uil uil-building" aria-hidden="true"></i></div>
                             <div>
-                                <h3 class="qualification_title">Software Developer (C#)</h3>
-                                <span class="qualification_subtitle">Knowledge Translation Unit - Cape Town</span>
-                                <div class="qualification_calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    2024 - Present <i class="uil uil-check-circle"></i>
-                                </div>
+                                <h3>Software Developer Intern</h3>
+                                <p class="qual-company">Clickatell, Cape Town</p>
+                                <span class="qual-date">2020</span>
                             </div>
-                            <div>
-                                <span class="qualification_rounder"></span>
-                                <!-- <span class="qualification_line"></span> -->
-                            </div>
-                        </div>                                            
+                        </div>
+                        <p class="qual-desc">Built and maintained messaging platform features. First exposure to enterprise Java development.</p>
+                        <div class="qual-tags">
+                            <span>Java</span><span>Spring Boot</span><span>MySQL</span><span>REST APIs</span>
+                        </div>
                     </div>
                 </div>
             </div>
