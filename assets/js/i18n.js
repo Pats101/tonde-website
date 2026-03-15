@@ -30,6 +30,22 @@ const translations = {
         "about.help.6": "Building full-stack web platforms",
         "about.cv": "Download CV",
 
+        // Nav
+        "nav.systems": "Systems",
+
+        // Systems
+        "systems.title": "Systems I've Worked On",
+        "systems.1": "Healthcare data platforms used by clinical teams and researchers",
+        "systems.2": "AI-enabled document processing and knowledge discovery systems",
+        "systems.3": "Distributed microservices architectures supporting enterprise applications",
+        "systems.4": "Cloud-native backend systems deployed in containerized environments",
+        "systems.5": "Threat intelligence data-sharing platforms built using MISP",
+        "systems.core.title": "Core Technologies",
+        "systems.core.backend": "Backend",
+        "systems.core.frontend": "Frontend",
+        "systems.core.cloud": "Cloud & Infrastructure",
+        "systems.core.arch": "Architecture",
+
         // Skills
         "skills.title": "Skills",
         "skills.frontend": "Frontend Developer",
@@ -116,6 +132,21 @@ const translations = {
         "about.cv": "Dhaunilodha CV",
 
         // Skills
+        "nav.systems": "Masistemu",
+
+        // Systems
+        "systems.title": "Masistemu Andakashanda Nawo",
+        "systems.1": "Mapuratifomi edata ehutano anoshandiswa nemapoka ekurapa nevaongorori",
+        "systems.2": "Masistemu ekugadzira magwaro neAI nekuwana ruzivo",
+        "systems.3": "Masistemu emicroservices akaparadzana anotsigira mapurogiramu ekukampani",
+        "systems.4": "Masistemu ebackend ecloud akaiswa mumacontainer",
+        "systems.5": "Mapuratifomi ekugoverana ruzivo rwenjodzi akagadzirwa neMISP",
+        "systems.core.title": "Tekinoroji Dzikuru",
+        "systems.core.backend": "Kumashure",
+        "systems.core.frontend": "Kumberi",
+        "systems.core.cloud": "Cloud neInfrastructure",
+        "systems.core.arch": "Masangano",
+
         "skills.title": "Zvandogona",
         "skills.frontend": "Mugadziri wePamberi",
         "skills.frontend.exp": "3+ makore eruzivo rwebasa",

@@ -19,17 +19,25 @@ $(document).ready(function(){
         const expanded = $('.navbar .menu').hasClass('active');
         $(this).attr('aria-expanded', expanded);
     });
-
+    
     // typing animation script
     const typedHome = new Typed(".typing", {
-        strings: ["a Software Engineer", "always Engineering and Developing", "a Pencil Artist"],
+        strings: [
+            "a Backend & Cloud Engineer",
+            "designing scalable distributed systems",
+            "building AI-powered platforms"
+        ],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     const typedAbout = new Typed(".typing-2", {
-        strings: ["a Software Engineer", "always Engineering and Developing", "a Pencil Artist"],
+        strings: [
+            "a Backend & Cloud Engineer",
+            "designing scalable distributed systems",
+            "building AI-powered platforms"
+        ],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
