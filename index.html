@@ -551,42 +551,66 @@
     <section class="hobbies scroll-reveal" id="hobbies">
         <div class="max-width">
             <h2 class="title" data-i18n="hobbies.title">My Hobbies</h2>
-        </div>
-        <div class="drawings_container container swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Drawing 1 -->
-                <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/lemon_splash.jpg" alt="Pencil drawing of a lemon splash" class="drawings_img" loading="lazy">
+            <p class="hobbies-subtitle">When I'm not coding, I express myself through pencil art. Here are some of my drawings.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item--tall">
+                    <img src="assets/img/drawings/lemon_splash.jpg" alt="Pencil drawing of a lemon splash" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label">Lemon Splash</span>
+                        <i class="uil uil-expand-arrows-alt" aria-hidden="true"></i>
+                    </div>
                 </div>
-                <!-- Drawing 2 -->
-                <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/bloody_rose.png" alt="Pencil drawing of a rose with red accents" class="drawings_img" loading="lazy">
+                <div class="gallery-item">
+                    <img src="assets/img/drawings/bloody_rose.png" alt="Pencil drawing of a rose with red accents" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label">Bloody Rose</span>
+                        <i class="uil uil-expand-arrows-alt" aria-hidden="true"></i>
+                    </div>
                 </div>
-                <!-- Drawing 3 -->
-                <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/red_girl.jpg" alt="Pencil portrait drawing with red highlights" class="drawings_img" loading="lazy">
+                <div class="gallery-item">
+                    <img src="assets/img/drawings/red_girl.jpg" alt="Pencil portrait drawing with red highlights" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label">Red Girl</span>
+                        <i class="uil uil-expand-arrows-alt" aria-hidden="true"></i>
+                    </div>
                 </div>
-                <!-- Drawing 4 -->
-                <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/belhar.jpg" alt="Pencil drawing of Belhar scenery" class="drawings_img" loading="lazy">
+                <div class="gallery-item gallery-item--tall">
+                    <img src="assets/img/drawings/belhar.jpg" alt="Pencil drawing of Belhar scenery" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label">Belhar</span>
+                        <i class="uil uil-expand-arrows-alt" aria-hidden="true"></i>
+                    </div>
                 </div>
-                <!-- Drawing 5 -->
-                <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/caroline.jpg" alt="Pencil portrait drawing of Caroline" class="drawings_img" loading="lazy">
+                <div class="gallery-item">
+                    <img src="assets/img/drawings/caroline.jpg" alt="Pencil portrait drawing of Caroline" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label">Caroline</span>
+                        <i class="uil uil-expand-arrows-alt" aria-hidden="true"></i>
+                    </div>
                 </div>
-                <!-- Drawing 6 -->
-                <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/baby_sweet_corn.jpg" alt="Pencil drawing of baby sweet corn" class="drawings_img" loading="lazy">
+                <div class="gallery-item">
+                    <img src="assets/img/drawings/baby_sweet_corn.jpg" alt="Pencil drawing of baby sweet corn" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label">Baby Sweet Corn</span>
+                        <i class="uil uil-expand-arrows-alt" aria-hidden="true"></i>
+                    </div>
                 </div>
-                <!-- Drawing 7 -->
-                <div class="drawings_content grid swiper-slide">
-                    <img src="assets/img/drawings/pain.jpg" alt="Pencil drawing depicting pain" class="drawings_img" loading="lazy">
-                </div>                                                                                                
+                <div class="gallery-item">
+                    <img src="assets/img/drawings/pain.jpg" alt="Pencil drawing depicting pain" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label">Pain</span>
+                        <i class="uil uil-expand-arrows-alt" aria-hidden="true"></i>
+                    </div>
+                </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- <div class="swiper-pagination"></div> -->
-        </div>        
+        </div>
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer" aria-hidden="true">
+            <button class="lightbox-close" aria-label="Close image viewer"><i class="uil uil-times" aria-hidden="true"></i></button>
+            <button class="lightbox-prev" aria-label="Previous image"><i class="uil uil-angle-left" aria-hidden="true"></i></button>
+            <img class="lightbox-img" id="lightbox-img" src="" alt="">
+            <button class="lightbox-next" aria-label="Next image"><i class="uil uil-angle-right" aria-hidden="true"></i></button>
+        </div>
     </section>
 
     <!-- Blog/Writing section -->

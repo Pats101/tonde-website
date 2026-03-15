@@ -88,21 +88,64 @@ if (contactForm) {
     });
 }
 
-// Drawings Swiper
-const swiperDrawings = new Swiper(".drawings_container", {
-    cssMode: true,
-    loop: true,
+// Gallery Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const galleryItems = document.querySelectorAll('.gallery-item');
+let currentGalleryIndex = 0;
 
-    navigation: {
-      nextEl: ".drawings_container .swiper-button-next",
-      prevEl: ".drawings_container .swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
+const galleryImages = Array.from(galleryItems).map(function(item) {
+    return item.querySelector('img');
 });
+
+galleryItems.forEach(function(item, index) {
+    item.addEventListener('click', function() {
+        currentGalleryIndex = index;
+        openLightbox(index);
+    });
+});
+
+function openLightbox(index) {
+    const img = galleryImages[index];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+function showPrev() {
+    currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+    openLightbox(currentGalleryIndex);
+}
+
+function showNext() {
+    currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+    openLightbox(currentGalleryIndex);
+}
+
+if (lightbox) {
+    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-prev').addEventListener('click', showPrev);
+    document.querySelector('.lightbox-next').addEventListener('click', showNext);
+
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+    });
+}
 
 // Dark Mode Toggle
 const themeToggle = document.getElementById('theme-toggle');
