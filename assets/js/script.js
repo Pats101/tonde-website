@@ -62,23 +62,19 @@ skillsHeader.forEach((element) => {
 })
 
 // Qualification Section
-const tabs = document.querySelectorAll('[data-target]'),
-        tabContents = document.querySelectorAll('[data-content]')
+const qualTabs = document.querySelectorAll('.qual-tab');
+const qualTimelines = document.querySelectorAll('.qual-timeline');
 
-tabs.forEach(tab => {
+qualTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-        const target = document.querySelector(tab.dataset.target)
+        const target = document.querySelector(tab.dataset.target);
 
-        tabContents.forEach(tabContent => {
-            tabContent.classList.remove('qualification_active')
-        })
-        target.classList.add('qualification_active')
+        qualTimelines.forEach(tl => tl.classList.remove('qual-timeline--active'));
+        target.classList.add('qual-timeline--active');
 
-        tabs.forEach(tab => {
-            tab.classList.remove('qualification_active')
-        })
-        tab.classList.add('qualification_active')
-    })
+        qualTabs.forEach(t => t.classList.remove('qual-tab--active'));
+        tab.classList.add('qual-tab--active');
+    });
 });
 
 // Portfolio Swiper

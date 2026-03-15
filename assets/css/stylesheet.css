@@ -653,94 +653,233 @@ section .title::after{
     outline: dashed 1px black;
 }
 
-/* My Education section styling */
-.myEdu{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Qualification section styling */
 .myEdu .title::after{
     content: "my journey";
 }
 
-.qualification_tabs{
+.qual-tabs{
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 2rem;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 50px;
 }
 
-.qualification_button{
-    font-size: 1.25rem;
-    font-weight: 500;
+.qual-tab{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
+    border: 2px solid var(--color-border);
+    border-radius: 50px;
+    background: var(--color-bg);
+    color: var(--color-text-secondary);
+    transition: all 0.3s ease;
 }
 
-.qualification_button:hover{
+.qual-tab i{
+    font-size: 1.3rem;
+}
+
+.qual-tab:hover{
+    border-color: var(--color-primary);
     color: var(--color-primary);
 }
 
-.qualification_icon{
-    font-size: 1.8rem;
-    margin-right: 0.25rem;
+.qual-tab--active{
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
 }
 
-.qualification_data{
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    column-gap: 1.5rem;
+.qual-tab--active:hover{
+    color: #fff;
 }
 
-.qualification_title{
-    font-size: 0.938rem;
+/* Zigzag Timeline */
+.qual-timeline{
+    display: none;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.qual-timeline--active{
+    display: block;
+}
+
+/* Center vertical line */
+.qual-timeline::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-accent));
+    transform: translateX(-50%);
+    border-radius: 3px;
+    opacity: 0.4;
+}
+
+.qual-item{
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    padding: 0 40px 40px 0;
+    position: relative;
+}
+
+/* Dot on the timeline */
+.qual-item::after{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--color-primary);
+    border: 3px solid var(--color-bg);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px var(--color-primary);
+    top: 28px;
+    z-index: 1;
+}
+
+/* Left-aligned items */
+.qual-item--left{
+    align-self: flex-start;
+    padding-right: 40px;
+    padding-left: 0;
+}
+
+.qual-item--left::after{
+    right: -8px;
+}
+
+/* Right-aligned items */
+.qual-item--right{
+    align-self: flex-end;
+    margin-left: 50%;
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.qual-item--right::after{
+    left: -8px;
+}
+
+/* Active dot glow */
+.qual-item:has(.qual-card--active)::after{
+    background: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent), 0 0 14px rgba(0, 255, 255, 0.5);
+}
+
+/* Card */
+.qual-card{
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.qual-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(2, 69, 170, 0.12);
+}
+
+[data-theme="dark"] .qual-card:hover{
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.08);
+}
+
+.qual-card--active{
+    border-color: var(--color-accent);
+}
+
+.qual-card-header{
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.qual-icon{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.qual-icon i{
+    font-size: 22px;
+    color: var(--color-primary);
+}
+
+.qual-icon--active{
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.qual-icon--active i{
+    color: #fff;
+}
+
+.qual-card h3{
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 2px;
+    color: var(--color-text);
+}
+
+.qual-company{
+    font-size: 0.88rem;
     font-weight: 500;
+    color: var(--color-text-secondary);
+    margin: 0;
 }
 
-.qualification_subtitle{
-    display: inline-block;
-    font-size: 0.813rem;
-    margin-bottom: 1rem;
-}
-
-.qualification_calendar{
-    font-size: 0.75rem;
+.qual-date{
+    font-size: 0.8rem;
     color: var(--color-primary-light);
 }
 
-.qualification_rounder{
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    background-color: var(--color-primary);
-    border-radius: 50%;
+.qual-desc{
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0 0 14px;
 }
 
-.qualification_line{
-    display: block;
-    width: 1px;
-    height: 100%;
-    background-color: var(--color-primary);
-    transform: translate(6px, -7px);
+.qual-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.qualification_dotted_line{
-    display: block;
-    width: 1px;
-    height: 85%;
-    background-color: #96e296;
-    transform: translate(6px, -7px);
+.qual-tags span{
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    background: var(--color-bg);
+    transition: all 0.2s ease;
 }
 
-.myEdu [data-content]{
-    display: none;
-}
-
-.qualification_active[data-content]{
-    display: block;
-}
-
-.qualification_button.qualification_active{
+.qual-tags span:hover{
+    border-color: var(--color-primary);
     color: var(--color-primary);
 }
 
@@ -1492,6 +1631,27 @@ footer span a:hover{
 
     .about-help-list{
         grid-template-columns: 1fr;
+    }
+
+    /* Qualification timeline — collapse to single column */
+    .qual-timeline::before{
+        left: 8px;
+    }
+
+    .qual-item,
+    .qual-item--left,
+    .qual-item--right{
+        width: 100%;
+        margin-left: 0;
+        padding-left: 40px;
+        padding-right: 0;
+    }
+
+    .qual-item::after,
+    .qual-item--left::after,
+    .qual-item--right::after{
+        left: 0;
+        right: auto;
     }
 
     .systems-card{
