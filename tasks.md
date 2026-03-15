@@ -43,14 +43,14 @@
 ---
 
 ### [TASK-006] Add dark mode toggle
-**Status:** TODO
+**Status:** DONE
 **Priority:** Low
 **Description:** Add a dark/light mode toggle. Use CSS custom properties for theming. Persist preference in localStorage.
 
 ---
 
 ### [TASK-007] Add page load animations
-**Status:** TODO
+**Status:** DONE
 **Priority:** Low
 **Description:** Use Intersection Observer API to animate sections as they scroll into view. Replace any jQuery scroll handlers with vanilla JS where possible.
 

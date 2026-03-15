@@ -1,5 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
+/* Theme Custom Properties */
+:root{
+    --color-primary: #0245aa;
+    --color-primary-light: #2364c5;
+    --color-primary-dark: #0b46e9;
+    --color-accent: aqua;
+    --color-bg: #fff;
+    --color-bg-alt: #f3f3f3;
+    --color-text: #111;
+    --color-text-secondary: #333;
+    --color-text-light: #b4b4b4;
+    --color-border: lightgrey;
+    --color-nav-bg: #111;
+    --color-footer-bg: #111;
+    --color-title-line: #111;
+}
+
+[data-theme="dark"]{
+    --color-bg: #1a1a2e;
+    --color-bg-alt: #16213e;
+    --color-text: #e0e0e0;
+    --color-text-secondary: #b0b0b0;
+    --color-text-light: #666;
+    --color-border: #444;
+    --color-nav-bg: #0f0f23;
+    --color-footer-bg: #0f0f23;
+    --color-title-line: #e0e0e0;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -29,7 +58,7 @@ html{
 
 .navbar.sticky{
     padding: 15px 0;
-    background: #0245aa;
+    background: var(--color-primary);
 }
 
 .navbar .max-width{
@@ -85,17 +114,39 @@ button.menu-btn{
     padding: 0;
 }
 
+/* Navbar actions (toggle + hamburger wrapper) */
+.navbar-actions{
+    display: flex;
+    align-items: center;
+}
+
+/* Theme toggle button */
+.theme-toggle{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 4px;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover{
+    color: var(--color-accent);
+}
+
 /* Scroll up button styling */
 .scroll-up-btn{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: aqua;
+    background: var(--color-accent);
     right: 30px;
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color: #111;
+    color: var(--color-text);
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
@@ -176,6 +227,12 @@ button.menu-btn{
     gap: 1.5rem;
 }
 
+body{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 section{
     padding: 100px 0;
 }
@@ -217,7 +274,7 @@ section .title::before{
     left: 50%;
     width: 250px;
     height: 3px;
-    background: #111;
+    background: var(--color-title-line);
     transform: translateX(-50%);
 }
 
@@ -226,9 +283,9 @@ section .title::after{
     bottom: -12px;
     left: 50%;
     font-size: 20px;
-    color: #0245aa;
+    color: var(--color-primary);
     padding: 5px;
-    background: #fff;
+    background: var(--color-bg);
     transform: translateX(-50%);
 }
 
@@ -260,7 +317,7 @@ section .title::after{
 }
 
 .about .about-content .right .text span{
-    color: #0245aa;
+    color: var(--color-primary);
 }
 
 .about .about-content .right p{
@@ -269,7 +326,7 @@ section .title::after{
 
 .about .about-content .right a{
     display: inline-block;
-    background: #0245aa;
+    background: var(--color-primary);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -281,7 +338,7 @@ section .title::after{
 }
 
 .about .about-content .right a:hover{
-    color: #0245aa;
+    color: var(--color-primary);
     background: none;
 }
 
@@ -304,7 +361,7 @@ section .title::after{
 .skills_icon,
 .skills_arrow{
     font-size: 2rem;
-    color: #0245aa;
+    color: var(--color-primary);
 }
 
 .skills_icon{
@@ -318,7 +375,7 @@ section .title::after{
 
 .skills_subtitle{
     font-size: .813rem;
-    color: #0b46e9;
+    color: var(--color-primary-dark);
 }
 
 .skills_arrow{
@@ -349,7 +406,7 @@ section .title::after{
 }
 
 .skills_bar{
-    background-color: #b4b4b4;
+    background-color: var(--color-text-light);
 }
 
 .skills_percentage{
@@ -443,7 +500,7 @@ section .title::after{
 }
 
 .qualification_button:hover{
-    color: #0245aa;
+    color: var(--color-primary);
 }
 
 .qualification_icon{
@@ -470,14 +527,14 @@ section .title::after{
 
 .qualification_calendar{
     font-size: 0.75rem;
-    color: #2364c5;
+    color: var(--color-primary-light);
 }
 
 .qualification_rounder{
     display: inline-block;
     width: 13px;
     height: 13px;
-    background-color: #0245aa;
+    background-color: var(--color-primary);
     border-radius: 50%;
 }
 
@@ -485,7 +542,7 @@ section .title::after{
     display: block;
     width: 1px;
     height: 100%;
-    background-color: #0245aa;
+    background-color: var(--color-primary);
     transform: translate(6px, -7px);
 }
 
@@ -506,7 +563,7 @@ section .title::after{
 }
 
 .qualification_button.qualification_active{
-    color: #0245aa;
+    color: var(--color-primary);
 }
 
 /* Projects section styling */
@@ -553,7 +610,7 @@ section .title::after{
 
 .portfolio_container .portfolio_content a{
     display: inline-block;
-    background: #0245aa;
+    background: var(--color-primary);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -565,7 +622,7 @@ section .title::after{
 }
 
 .portfolio_container .portfolio_content a:hover{
-    color: #0245aa;
+    color: var(--color-primary);
     background: none;
 }
 
@@ -623,7 +680,7 @@ section .title::after{
 
 .contact .contact-content .row i{
     font-size: 25px;
-    color: #0245aa;
+    color: var(--color-primary);
 }
 
 .contact .contact-content .info .head{
@@ -631,7 +688,7 @@ section .title::after{
 }
 
 .contact .contact-content .info .sub-title{
-    color: #333;
+    color: var(--color-text-secondary);
 }
 
 .contact .right form .fields{
@@ -662,12 +719,14 @@ section .title::after{
 .contact .right form .textarea textarea{
     height: 100%;
     width: 100%;
-    border: 1px solid lightgrey;
+    border: 1px solid var(--color-border);
     border-radius: 6px;
     outline: none;
     padding: 0 15px;
     font-size: 17px;
     font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 .contact .right form .textarea textarea{
@@ -683,8 +742,8 @@ section .title::after{
 .contact .right form .button button{
     width: 100%;
     height: 100%;
-    border: 2px solid aqua;
-    background: #0245aa;
+    border: 2px solid var(--color-accent);
+    background: var(--color-primary);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -694,13 +753,25 @@ section .title::after{
 }
 
 .contact .right form .button button:hover{
-    color: #0245aa;
+    color: var(--color-primary);
     background: none;
 }
 
 #form-status{
     margin-top: 10px;
     display: none;
+}
+
+#form-status.visible{
+    display: block;
+}
+
+#form-status.success{
+    color: var(--color-primary);
+}
+
+#form-status.error{
+    color: #e74c3c;
 }
 
 /* Pop-up Contact section */
@@ -737,7 +808,7 @@ section .title::after{
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background: #0245aa;
+    background: var(--color-primary);
     padding: 2px;
     margin-bottom: 10px;
 }
@@ -754,8 +825,7 @@ section .title::after{
 .my-profile .profession{
     font-size: 18px;
     font-weight: 500;
-    color: #333;
-
+    color: var(--color-text-secondary);
 }
 
 .my-profile .profession{
@@ -767,7 +837,7 @@ section .title::after{
     display: flex;
     align-items: center;
     padding: 12px 20px;
-    background: #0245aa;
+    background: var(--color-primary);
     margin-top: 15px;
     border-radius: 6px;
     cursor: pointer;
@@ -775,7 +845,7 @@ section .title::after{
 }
 
 .my-profile .button:hover{
-    background: #317ae7;
+    background: var(--color-primary-light);
 }
 
 .my-profile .button i{
@@ -820,7 +890,7 @@ section .title::after{
     padding: 30px;
     max-width: 380px;
     width: 100%;
-    background: #fff;
+    background: var(--color-bg);
     border-radius: 12px;
 }
 
@@ -829,13 +899,13 @@ section .title::after{
     top: 16px;
     right: 16px;
     font-size: 24px;
-    color: #b4b4b4;
+    color: var(--color-text-light);
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .popup-box .close:hover{
-    color: #333;
+    color: var(--color-text-secondary);
 }
 
 .myProfile .popup-box .my-profile-text{
@@ -871,13 +941,14 @@ section .title::after{
     width: 100%;
     margin-top: 20px;
     outline: none;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     padding: 12px;
     border-radius: 6px;
     resize: none;
     font-size: 14px;
     font-weight: 400;
-    background: #f3f3f3;
+    background: var(--color-bg-alt);
+    color: var(--color-text);
 }
 
 .myProfile .popup-box .button{
@@ -891,7 +962,7 @@ section .title::after{
     border: none;
     padding: 6px 12px;
     border-radius: 6px;
-    background: #2364c5;
+    background: var(--color-primary-light);
     color: #fff;
     margin-left: 8px;
     font-size: 14px;
@@ -908,12 +979,24 @@ section .title::after{
 }
 
 .button button.send:hover{
-    background: #0b46e9;
+    background: var(--color-primary-dark);
+}
+
+/* Scroll animations */
+.scroll-reveal{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.revealed{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer section styling */
 footer{
-    background: #111;
+    background: var(--color-footer-bg);
     padding: 20px 23px;
     color: #fff;
 }
@@ -1019,7 +1102,7 @@ footer span a:hover{
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: var(--color-nav-bg);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;

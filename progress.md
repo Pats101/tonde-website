@@ -65,4 +65,35 @@
 - Updated footer copyright year from 2022 to 2024
 
 ### Action required
-- **Formspree setup:** Go to https://formspree.io, create a free account, create a form, and replace `YOUR_FORM_ID` in index.html line ~487 with your actual form ID
+- **Formspree setup:** Go to https://formspree.io, create a free account, create a form, and replace `YOUR_FORM_ID` in index.html with your actual form ID
+
+---
+
+## 2026-03-15 — Phase 2: Content & Polish
+
+### What was done
+
+#### TASK-006: Dark mode toggle
+- Added CSS custom properties (`:root` and `[data-theme="dark"]`) for all colors
+- Converted 25+ hardcoded color values to CSS variables across the stylesheet
+- Added theme toggle button (moon/sun icon) in the navbar
+- Theme preference persists in localStorage
+- Smooth transition on background and text color changes
+- Dark theme uses: bg `#1a1a2e`, alt bg `#16213e`, text `#e0e0e0`
+- Form inputs, contact section, footer, mobile menu all adapt to dark mode
+
+#### TASK-007: Page load animations
+- Added `scroll-reveal` CSS class with fade-up animation (opacity + translateY)
+- Applied to 6 sections: About, Skills, Qualification, Projects, Hobbies, Contact
+- Used Intersection Observer API with 15% threshold
+- Elements animate once and observer is disconnected (no repeat)
+- Graceful fallback for browsers without IntersectionObserver support
+- Home section excluded (always visible as first section)
+
+#### Cleanup
+- Removed 36 lines of commented-out popup contact HTML
+- Removed commented-out JS blocks (myProfile event listeners)
+- Cleaned up dead code throughout script.js
+
+### Action required
+- **Formspree setup:** Go to https://formspree.io, create a free account, create a form, and replace `YOUR_FORM_ID` in index.html with your actual form ID
