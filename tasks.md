@@ -60,3 +60,38 @@
 **Status:** TODO
 **Priority:** Medium
 **Description:** Verify all project demo links work. Update screenshots if needed. Consider adding more recent projects.
+
+---
+
+### [TASK-009] Add structured data (JSON-LD)
+**Status:** DONE
+**Priority:** High
+**Description:** Add JSON-LD Person schema for rich search results in Google.
+
+---
+
+### [TASK-010] Add blog/writing section
+**Status:** DONE
+**Priority:** Medium
+**Description:** Add a writing section with article cards. Currently has placeholder "Coming Soon" articles.
+
+---
+
+### [TASK-011] Add privacy-friendly analytics
+**Status:** TODO
+**Priority:** Low
+**Description:** GoatCounter script is ready in index.html (commented out). Sign up at goatcounter.com and uncomment with your site code.
+
+---
+
+### [TASK-012] Multi-language support
+**Status:** DONE
+**Priority:** Medium
+**Description:** Added client-side i18n with English and Shona translations. Language switcher in navbar, preference saved in localStorage.
+
+---
+
+### [TASK-013] GitHub Actions CI pipeline
+**Status:** DONE
+**Priority:** Medium
+**Description:** Added .github/workflows/validate.yml for HTML validation and broken link checking on push/PR to master.

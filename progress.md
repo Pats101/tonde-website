@@ -65,7 +65,7 @@
 - Updated footer copyright year from 2022 to 2024
 
 ### Action required
-- **Formspree setup:** Go to https://formspree.io, create a free account, create a form, and replace `YOUR_FORM_ID` in index.html with your actual form ID
+- **Formspree setup:** Done (user added form ID)
 
 ---
 
@@ -96,4 +96,65 @@
 - Cleaned up dead code throughout script.js
 
 ### Action required
-- **Formspree setup:** Go to https://formspree.io, create a free account, create a form, and replace `YOUR_FORM_ID` in index.html with your actual form ID
+- **Formspree setup:** Done (user added form ID)
+
+---
+
+## 2026-03-15 — Phase 3: Growth Features
+
+### What was done
+
+#### TASK-009: Structured Data (JSON-LD)
+- Added Person schema in `<head>` with JSON-LD
+- Includes: name, jobTitle, worksFor, address, email, alumniOf, knowsAbout, sameAs (GitHub)
+- Enables rich search results in Google (knowledge panel potential)
+
+#### TASK-010: Blog/Writing Section
+- Added new "Writing" section between Hobbies and Contact
+- 3 article cards with "Coming Soon" tags as placeholders
+- Topics: .NET scalability, Java-to-C# journey, Vue 3 Composition API
+- Card layout with hover effects, tags, excerpts, and meta info
+- Responsive grid (3 columns -> 1 column on mobile)
+- Dark mode compatible with accent-tinted tag badges
+- Added "Writing" to navbar navigation
+
+#### TASK-011: Analytics (GoatCounter)
+- Added GoatCounter script tag (commented out) in index.html
+- Privacy-friendly, no cookies, free for non-commercial use
+- Ready to activate after signing up at goatcounter.com
+
+#### Contact Section Modernization
+- Redesigned with 3 info cards (Email, Location, GitHub) with icon circles
+- Centered form wrapper with floating labels and focus glow
+- Fully responsive and dark mode compatible
+
+### Action required
+- **Analytics:** Sign up at https://goatcounter.com, uncomment the script tag at bottom of index.html, replace `YOUR_SITE_CODE`
+- **Blog articles:** When you publish, wrap each `<article>` in an `<a>` tag and remove the "Coming Soon" tags
+
+---
+
+## 2026-03-15 — Phase 4: Advanced Features
+
+### What was done
+
+#### TASK-012: Multi-language support (English + Shona)
+- Created `assets/js/i18n.js` with translation system
+- Added `data-i18n` attributes to all translatable text elements across the site
+- Translations cover: nav, home, about, skills, qualification, projects, hobbies, blog, contact, footer
+- Language toggle button (EN/SN) in navbar next to theme toggle
+- Language preference persists in localStorage
+- Shona (chiShona) translations for all UI text
+- English remains the default; SEO content (meta tags, JSON-LD) stays in English
+
+#### TASK-013: GitHub Actions CI pipeline
+- Created `.github/workflows/validate.yml`
+- Runs on push to master and on pull requests
+- HTML5 validation using html5validator
+- Broken link checking using lychee (excludes mailto links)
+- Free for public repositories on GitHub
+
+### Notes
+- CMS integration skipped — not practical for a $0 vanilla static site; content lives in HTML which is better for SEO
+- A/B testing skipped — not applicable for a personal portfolio site
+- To add more languages: add a new key to the `translations` object in `i18n.js` and update the toggle logic
