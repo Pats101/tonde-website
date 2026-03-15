@@ -44,23 +44,6 @@ $(document).ready(function(){
     });
 });
 
-// Skills Section
-const skillsContent = document.getElementsByClassName('my_skill_content'), 
-        skillsHeader=document.querySelectorAll('.skill_header');
-function toggleSkills(){
-    let itemClass = this.parentNode.className;
-    for (let p = 0; p < skillsContent.length; p++) {
-        skillsContent[p].className = 'my_skill_content skills_close';        
-    }
-    if(itemClass === 'my_skill_content skills_close'){
-        this.parentNode.className = 'my_skill_content skills_open'
-    }
-}
-
-skillsHeader.forEach((element) => {
-    element.addEventListener('click', toggleSkills)
-})
-
 // Qualification Section
 const qualTabs = document.querySelectorAll('.qual-tab');
 const qualTimelines = document.querySelectorAll('.qual-timeline');
