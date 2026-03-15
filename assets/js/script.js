@@ -60,22 +60,6 @@ qualTabs.forEach(tab => {
     });
 });
 
-// Portfolio Swiper
-const swiperPortfolio = new Swiper(".portfolio_container", {
-    cssMode: true,
-    loop: true,
-
-    navigation: {
-      nextEl: ".portfolio_container .swiper-button-next",
-      prevEl: ".portfolio_container .swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
-});
-
 // Contact Form Submission
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
