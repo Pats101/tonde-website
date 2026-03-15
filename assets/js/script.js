@@ -1,8 +1,3 @@
-
-// const mySection = document.querySelector(".myProfile"),
-//         hireBtn = mySection.querySelector("#hireBtn"),
-//         closeBtn = mySection.querySelectorAll("#close");
-
 $(document).ready(function(){
     $(window).scroll(function(){
         if(this.scrollY > 20){
@@ -21,7 +16,7 @@ $(document).ready(function(){
     $('button.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
-        var expanded = $('.navbar .menu').hasClass('active');
+        const expanded = $('.navbar .menu').hasClass('active');
         $(this).attr('aria-expanded', expanded);
     });
 
@@ -40,16 +35,6 @@ $(document).ready(function(){
         loop: true
     });
 });
-
-// hireBtn.addEventListener("click", () =>{
-//    mySection.classList.add("show") 
-// });
-
-// closeBtn.forEach(cBtn => {
-//     cBtn.addEventListener("click", () => {
-//         mySection.classList.remove("show") 
-//     });
-// });
 
 // Skills Section
 const skillsContent = document.getElementsByClassName('my_skill_content'), 
@@ -118,19 +103,16 @@ if (contactForm) {
             body: data,
             headers: { 'Accept': 'application/json' }
         }).then(function(response) {
-            formStatus.style.display = 'block';
+            formStatus.className = response.ok ? 'visible success' : 'visible error';
             if (response.ok) {
                 formStatus.textContent = 'Message sent successfully!';
-                formStatus.style.color = '#0245aa';
                 contactForm.reset();
             } else {
                 formStatus.textContent = 'Something went wrong. Please try again.';
-                formStatus.style.color = '#e74c3c';
             }
         }).catch(function() {
-            formStatus.style.display = 'block';
+            formStatus.className = 'visible error';
             formStatus.textContent = 'Something went wrong. Please try again.';
-            formStatus.style.color = '#e74c3c';
         });
     });
 }
@@ -150,3 +132,58 @@ const swiperDrawings = new Swiper(".drawings_container", {
     mousewheel: true,
     keyboard: true,
 });
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+if (!themeToggle) { console.warn('Theme toggle element not found'); }
+const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+
+function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    if (themeIcon) {
+        if (theme === 'dark') {
+            themeIcon.classList.remove('uil-moon');
+            themeIcon.classList.add('uil-sun');
+        } else {
+            themeIcon.classList.remove('uil-sun');
+            themeIcon.classList.add('uil-moon');
+        }
+    }
+}
+
+// Load saved theme or default to light
+const savedTheme = localStorage.getItem('theme') || 'light';
+if (savedTheme === 'dark') {
+    setTheme('dark');
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+        const current = document.documentElement.getAttribute('data-theme');
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+}
+
+// Scroll Reveal Animations (Intersection Observer)
+const revealElements = document.querySelectorAll('.scroll-reveal');
+
+if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(function(el) {
+        revealObserver.observe(el);
+    });
+} else {
+    // Fallback: show everything if IntersectionObserver is not supported
+    revealElements.forEach(function(el) {
+        el.classList.add('revealed');
+    });
+}
