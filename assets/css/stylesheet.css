@@ -363,6 +363,43 @@ section .title::after{
     background: none;
 }
 
+.about-help{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.about-help h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--color-text);
+}
+
+.about-help-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 30px;
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-help-list li{
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    padding-left: 28px;
+    position: relative;
+}
+
+.about-help-list li::before{
+    content: "\2714";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
 /* MySkills section styling */
 .mySkills .title::after{
     content: "what i know";
@@ -1331,6 +1368,10 @@ footer span a:hover{
 
     .about .about-content .right{
         flex: 100%;
+    }
+
+    .about-help-list{
+        grid-template-columns: 1fr;
     }
 
     .blog-grid{
