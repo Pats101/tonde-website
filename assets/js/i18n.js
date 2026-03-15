@@ -19,8 +19,32 @@ const translations = {
         // About
         "about.title": "About me",
         "about.intro": "I'm Patrick Ganhiwa and I'm ",
-        "about.bio": "Engineering and Developing software that will enable an individual's daily activities seem flawless is my objective. I have good communication skills with teams, experience in all phases of product development from planning, requirement gathering, to implementing, and testing.",
+        "about.bio": "I am a software engineer focused on building scalable backend systems, cloud-native services, and AI-enabled applications. My work centers around designing reliable APIs, distributed systems, and data-driven platforms that support real-world workflows across research and healthcare environments.",
+        "about.bio2": "I have experience working across the full stack, but my primary focus is backend engineering using technologies such as C# / .NET, Python, and modern cloud infrastructure. Recently I have also been developing AI-integrated systems, combining document processing pipelines, vector databases, and large language models to support intelligent knowledge systems.",
+        "about.help.title": "What I Can Help With",
+        "about.help.1": "Designing scalable backend APIs",
+        "about.help.2": "Building microservices architectures",
+        "about.help.3": "Developing cloud-native applications",
+        "about.help.4": "Designing data processing pipelines",
+        "about.help.5": "Integrating AI capabilities into production systems",
+        "about.help.6": "Building full-stack web platforms",
         "about.cv": "Download CV",
+
+        // Nav
+        "nav.systems": "Systems",
+
+        // Systems
+        "systems.title": "Systems I've Worked On",
+        "systems.1": "Healthcare data platforms used by clinical teams and researchers",
+        "systems.2": "AI-enabled document processing and knowledge discovery systems",
+        "systems.3": "Distributed microservices architectures supporting enterprise applications",
+        "systems.4": "Cloud-native backend systems deployed in containerized environments",
+        "systems.5": "Threat intelligence data-sharing platforms built using MISP",
+        "systems.core.title": "Core Technologies",
+        "systems.core.backend": "Backend",
+        "systems.core.frontend": "Frontend",
+        "systems.core.cloud": "Cloud & Infrastructure",
+        "systems.core.arch": "Architecture",
 
         // Skills
         "skills.title": "Skills",
@@ -96,10 +120,33 @@ const translations = {
         // About
         "about.title": "Pamusoro Pangu",
         "about.intro": "Ndini Patrick Ganhiwa uye ndiri ",
-        "about.bio": "Kugadzira nekuvandudza masoftware anoita kuti zviito zvezuva nezuva zvemunhu zvionekwe sezvisina kuoma ndiro chinangwa changu. Ndine unyanzvi hwekutaurirana nemapoka, ruzivo mumatanho ese ekugadzira zvigadzirwa kubva mukuronga, kuunganidza zvinodiwa, kuzvigadzira, nekuedza.",
+        "about.bio": "Ndiri injiniya yemasoftware inoshanda pakugadzira masistemu ebackend anokura, masevhisi ecloud, nemasoftware ane AI. Basa rangu rinoshanda pakugadzira maAPI akavimbika, masistemu akaparadzana, nemapuratifomi anoendeshwa nedata anosimbisa maitiro echokwadi mutsvakiridzo nenzvimbo dzehutano.",
+        "about.bio2": "Ndine ruzivo rwekushanda nepurogiramu yese, asi chinangwa changu chikuru ndechekugadzira backend ndichishandisa tekinoroji dzakadai seC# / .NET, Python, neinfrastructure yecloud yemazuva ano. Munguva pfupi yapfuura ndanga ndichigadzirawo masistemu ane AI, ndichisanganisa mapipeline ekugadzira magwaro, madatabheisi evector, neAI hombe kuti nditsigire masistemu eruzivo ane njere.",
+        "about.help.title": "Zvandinogona Kukubatsirai Nazvo",
+        "about.help.1": "Kugadzira maAPI ebackend anokura",
+        "about.help.2": "Kuvaka masistemu emicroservices",
+        "about.help.3": "Kugadzira mapurogiramu ecloud",
+        "about.help.4": "Kugadzira mapipeline ekugadzira data",
+        "about.help.5": "Kusanganisa unyanzvi hweAI mumasistemu echokwadi",
+        "about.help.6": "Kuvaka mapuratifomi eweb ese",
         "about.cv": "Dhaunilodha CV",
 
         // Skills
+        "nav.systems": "Masistemu",
+
+        // Systems
+        "systems.title": "Masistemu Andakashanda Nawo",
+        "systems.1": "Mapuratifomi edata ehutano anoshandiswa nemapoka ekurapa nevaongorori",
+        "systems.2": "Masistemu ekugadzira magwaro neAI nekuwana ruzivo",
+        "systems.3": "Masistemu emicroservices akaparadzana anotsigira mapurogiramu ekukampani",
+        "systems.4": "Masistemu ebackend ecloud akaiswa mumacontainer",
+        "systems.5": "Mapuratifomi ekugoverana ruzivo rwenjodzi akagadzirwa neMISP",
+        "systems.core.title": "Tekinoroji Dzikuru",
+        "systems.core.backend": "Kumashure",
+        "systems.core.frontend": "Kumberi",
+        "systems.core.cloud": "Cloud neInfrastructure",
+        "systems.core.arch": "Masangano",
+
         "skills.title": "Zvandogona",
         "skills.frontend": "Mugadziri wePamberi",
         "skills.frontend.exp": "3+ makore eruzivo rwebasa",

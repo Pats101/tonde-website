@@ -19,74 +19,45 @@ $(document).ready(function(){
         const expanded = $('.navbar .menu').hasClass('active');
         $(this).attr('aria-expanded', expanded);
     });
-
+    
     // typing animation script
     const typedHome = new Typed(".typing", {
-        strings: ["a Software Engineer", "always Engineering and Developing", "a Pencil Artist"],
+        strings: [
+            "a Backend & Cloud Engineer",
+            "designing scalable distributed systems",
+            "building AI-powered platforms"
+        ],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 
     const typedAbout = new Typed(".typing-2", {
-        strings: ["a Software Engineer", "always Engineering and Developing", "a Pencil Artist"],
+        strings: [
+            "a Backend & Cloud Engineer",
+            "designing scalable distributed systems",
+            "building AI-powered platforms"
+        ],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
 });
 
-// Skills Section
-const skillsContent = document.getElementsByClassName('my_skill_content'), 
-        skillsHeader=document.querySelectorAll('.skill_header');
-function toggleSkills(){
-    let itemClass = this.parentNode.className;
-    for (let p = 0; p < skillsContent.length; p++) {
-        skillsContent[p].className = 'my_skill_content skills_close';        
-    }
-    if(itemClass === 'my_skill_content skills_close'){
-        this.parentNode.className = 'my_skill_content skills_open'
-    }
-}
-
-skillsHeader.forEach((element) => {
-    element.addEventListener('click', toggleSkills)
-})
-
 // Qualification Section
-const tabs = document.querySelectorAll('[data-target]'),
-        tabContents = document.querySelectorAll('[data-content]')
+const qualTabs = document.querySelectorAll('.qual-tab');
+const qualTimelines = document.querySelectorAll('.qual-timeline');
 
-tabs.forEach(tab => {
+qualTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-        const target = document.querySelector(tab.dataset.target)
+        const target = document.querySelector(tab.dataset.target);
 
-        tabContents.forEach(tabContent => {
-            tabContent.classList.remove('qualification_active')
-        })
-        target.classList.add('qualification_active')
+        qualTimelines.forEach(tl => tl.classList.remove('qual-timeline--active'));
+        target.classList.add('qual-timeline--active');
 
-        tabs.forEach(tab => {
-            tab.classList.remove('qualification_active')
-        })
-        tab.classList.add('qualification_active')
-    })
-});
-
-// Portfolio Swiper
-const swiperPortfolio = new Swiper(".portfolio_container", {
-    cssMode: true,
-    loop: true,
-
-    navigation: {
-      nextEl: ".portfolio_container .swiper-button-next",
-      prevEl: ".portfolio_container .swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
+        qualTabs.forEach(t => t.classList.remove('qual-tab--active'));
+        tab.classList.add('qual-tab--active');
+    });
 });
 
 // Contact Form Submission
@@ -117,21 +88,64 @@ if (contactForm) {
     });
 }
 
-// Drawings Swiper
-const swiperDrawings = new Swiper(".drawings_container", {
-    cssMode: true,
-    loop: true,
+// Gallery Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const galleryItems = document.querySelectorAll('.gallery-item');
+let currentGalleryIndex = 0;
 
-    navigation: {
-      nextEl: ".drawings_container .swiper-button-next",
-      prevEl: ".drawings_container .swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
+const galleryImages = Array.from(galleryItems).map(function(item) {
+    return item.querySelector('img');
 });
+
+galleryItems.forEach(function(item, index) {
+    item.addEventListener('click', function() {
+        currentGalleryIndex = index;
+        openLightbox(index);
+    });
+});
+
+function openLightbox(index) {
+    const img = galleryImages[index];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+function showPrev() {
+    currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+    openLightbox(currentGalleryIndex);
+}
+
+function showNext() {
+    currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+    openLightbox(currentGalleryIndex);
+}
+
+if (lightbox) {
+    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-prev').addEventListener('click', showPrev);
+    document.querySelector('.lightbox-next').addEventListener('click', showNext);
+
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+    });
+}
 
 // Dark Mode Toggle
 const themeToggle = document.getElementById('theme-toggle');
