@@ -262,7 +262,7 @@ section{
     padding: 2rem 0 4rem;
 }
 
-.about, .mySkills, .myEdu, .projects, .hobbies, .blog, .contact, .myProfile, footer{
+.about, .systems, .mySkills, .myEdu, .projects, .hobbies, .blog, .contact, .myProfile, footer{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -398,6 +398,126 @@ section .title::after{
     left: 0;
     color: var(--color-primary);
     font-weight: 700;
+}
+
+/* Systems section styling */
+.systems .title::after{
+    content: "what i've built";
+}
+
+.systems-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.systems-card{
+    flex: 0 1 calc(33.333% - 16px);
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 12px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.systems-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(2, 69, 170, 0.12);
+}
+
+[data-theme="dark"] .systems-card:hover{
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.08);
+}
+
+.systems-card-icon{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.systems-card-icon i{
+    font-size: 22px;
+    color: #fff;
+}
+
+.systems-card p{
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Core Technologies block */
+.core-tech{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.core-tech > h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--color-text);
+}
+
+.core-tech-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.core-tech-card{
+    padding: 24px 20px;
+    border-radius: 12px;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+
+.core-tech-card h4{
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.core-tech-card h4 i{
+    font-size: 1.2rem;
+}
+
+.core-tech-card ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.core-tech-card ul li{
+    font-size: 0.88rem;
+    color: var(--color-text-secondary);
+    padding: 5px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.core-tech-card ul li:last-child{
+    border-bottom: none;
 }
 
 /* MySkills section styling */
@@ -1374,6 +1494,14 @@ footer span a:hover{
         grid-template-columns: 1fr;
     }
 
+    .systems-card{
+        flex: 0 1 100%;
+    }
+
+    .core-tech-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .blog-grid{
         grid-template-columns: 1fr;
         max-width: 500px;
@@ -1462,6 +1590,10 @@ footer span a:hover{
 
     .home .home-content .text-3{
         font-size: 27px;
+    }
+
+    .core-tech-grid{
+        grid-template-columns: 1fr;
     }
 
     .contact-form-wrapper{
