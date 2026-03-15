@@ -1,5 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
+/* Theme Custom Properties */
+:root{
+    --color-primary: #0245aa;
+    --color-primary-light: #2364c5;
+    --color-primary-dark: #0b46e9;
+    --color-accent: aqua;
+    --color-bg: #fff;
+    --color-bg-alt: #f3f3f3;
+    --color-text: #111;
+    --color-text-secondary: #333;
+    --color-text-light: #b4b4b4;
+    --color-border: lightgrey;
+    --color-nav-bg: #111;
+    --color-footer-bg: #111;
+    --color-title-line: #111;
+}
+
+[data-theme="dark"]{
+    --color-bg: #1a1a2e;
+    --color-bg-alt: #16213e;
+    --color-text: #e0e0e0;
+    --color-text-secondary: #b0b0b0;
+    --color-text-light: #666;
+    --color-border: #444;
+    --color-nav-bg: #0f0f23;
+    --color-footer-bg: #0f0f23;
+    --color-title-line: #e0e0e0;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -29,7 +58,7 @@ html{
 
 .navbar.sticky{
     padding: 15px 0;
-    background: #0245aa;
+    background: var(--color-primary);
 }
 
 .navbar .max-width{
@@ -79,26 +108,79 @@ html{
     display: none;
 }
 
+button.menu-btn{
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Navbar actions (toggle + hamburger wrapper) */
+.navbar-actions{
+    display: flex;
+    align-items: center;
+}
+
+/* Language toggle button */
+.lang-toggle{
+    background: none;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.lang-toggle:hover{
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* Theme toggle button */
+.theme-toggle{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 4px;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover{
+    color: var(--color-accent);
+}
+
 /* Scroll up button styling */
 .scroll-up-btn{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: aqua;
+    background: var(--color-accent);
     right: 30px;
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color: #111;
+    color: var(--color-text);
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .scroll-up-btn.show{
     bottom: 30px;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 /* Home section */
@@ -166,6 +248,12 @@ html{
     gap: 1.5rem;
 }
 
+body{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 section{
     padding: 100px 0;
 }
@@ -174,7 +262,7 @@ section{
     padding: 2rem 0 4rem;
 }
 
-.about, .mySkills, .myEdu, .projects, .hobbies, .contact, .myProfile, footer{
+.about, .mySkills, .myEdu, .projects, .hobbies, .blog, .contact, .myProfile, footer{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -207,7 +295,7 @@ section .title::before{
     left: 50%;
     width: 250px;
     height: 3px;
-    background: #111;
+    background: var(--color-title-line);
     transform: translateX(-50%);
 }
 
@@ -216,9 +304,9 @@ section .title::after{
     bottom: -12px;
     left: 50%;
     font-size: 20px;
-    color: #0245aa;
+    color: var(--color-primary);
     padding: 5px;
-    background: #fff;
+    background: var(--color-bg);
     transform: translateX(-50%);
 }
 
@@ -250,7 +338,7 @@ section .title::after{
 }
 
 .about .about-content .right .text span{
-    color: #0245aa;
+    color: var(--color-primary);
 }
 
 .about .about-content .right p{
@@ -259,7 +347,7 @@ section .title::after{
 
 .about .about-content .right a{
     display: inline-block;
-    background: #0245aa;
+    background: var(--color-primary);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -271,7 +359,7 @@ section .title::after{
 }
 
 .about .about-content .right a:hover{
-    color: #0245aa;
+    color: var(--color-primary);
     background: none;
 }
 
@@ -294,7 +382,7 @@ section .title::after{
 .skills_icon,
 .skills_arrow{
     font-size: 2rem;
-    color: #0245aa;
+    color: var(--color-primary);
 }
 
 .skills_icon{
@@ -303,11 +391,12 @@ section .title::after{
 
 .skills_title{
     font-size: 1.125rem;
+    margin: 0;
 }
 
 .skills_subtitle{
     font-size: .813rem;
-    color: #0b46e9;
+    color: var(--color-primary-dark);
 }
 
 .skills_arrow{
@@ -338,7 +427,7 @@ section .title::after{
 }
 
 .skills_bar{
-    background-color: #b4b4b4;
+    background-color: var(--color-text-light);
 }
 
 .skills_percentage{
@@ -431,8 +520,8 @@ section .title::after{
     cursor: pointer;
 }
 
-.qualifiaction_button:hover{
-    color: #0245aa;
+.qualification_button:hover{
+    color: var(--color-primary);
 }
 
 .qualification_icon{
@@ -459,14 +548,14 @@ section .title::after{
 
 .qualification_calendar{
     font-size: 0.75rem;
-    color: #2364c5;
+    color: var(--color-primary-light);
 }
 
 .qualification_rounder{
     display: inline-block;
     width: 13px;
     height: 13px;
-    background-color: #0245aa;
+    background-color: var(--color-primary);
     border-radius: 50%;
 }
 
@@ -474,7 +563,7 @@ section .title::after{
     display: block;
     width: 1px;
     height: 100%;
-    background-color: #0245aa;
+    background-color: var(--color-primary);
     transform: translate(6px, -7px);
 }
 
@@ -495,7 +584,7 @@ section .title::after{
 }
 
 .qualification_button.qualification_active{
-    color: #0245aa;
+    color: var(--color-primary);
 }
 
 /* Projects section styling */
@@ -542,7 +631,7 @@ section .title::after{
 
 .portfolio_container .portfolio_content a{
     display: inline-block;
-    background: #0245aa;
+    background: var(--color-primary);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
@@ -554,7 +643,7 @@ section .title::after{
 }
 
 .portfolio_container .portfolio_content a:hover{
-    color: #0245aa;
+    color: var(--color-primary);
     background: none;
 }
 
@@ -577,114 +666,292 @@ section .title::after{
     justify-self: center;
 }
 
+/* Blog/Writing section styling */
+.blog .title::after{
+    content: "my thoughts";
+}
+
+.blog-subtitle{
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.blog-card{
+    position: relative;
+    padding: 30px 24px;
+    border-radius: 12px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(2, 69, 170, 0.12);
+}
+
+[data-theme="dark"] .blog-card:hover{
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.08);
+}
+
+.blog-card-tag{
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-primary);
+    background: rgba(2, 69, 170, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    width: fit-content;
+}
+
+[data-theme="dark"] .blog-card-tag{
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--color-accent);
+}
+
+.blog-card-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    color: var(--color-text);
+}
+
+.blog-card-excerpt{
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 16px;
+}
+
+.blog-card-meta{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+    border-top: 1px solid var(--color-border);
+    padding-top: 12px;
+}
+
+.blog-card-meta i{
+    margin-right: 4px;
+}
+
 /* Contact section styling */
 .contact .title::after{
     content: "get in touch";
 }
 
-.contact .contact-content .column{
-    width: calc(50% - 30px);
+.contact-subtitle{
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact .contact-content .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
+.contact-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 50px;
 }
 
-.contact .contact-content .left p{
-    text-align: justify;
-}
-
-.contact .contact-content .left .icons{
-    margin: 10px 0;
-}
-
-.contact .contact-content .row{
+.contact-card{
     display: flex;
-    height: 65px;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 12px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--color-text);
 }
 
-.contact .contact-content .row .info{
-    margin-left: 30px;
+.contact-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(2, 69, 170, 0.15);
 }
 
-.contact .contact-content .row i{
-    font-size: 25px;
-    color: #0245aa;
+[data-theme="dark"] .contact-card:hover{
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.08);
 }
 
-.contact .contact-content .info .head{
-    font-weight: 500;
-}
-
-.contact .contact-content .info .sub-title{
-    color: #333;
-}
-
-.contact .right form .fields{
+.contact-card-icon{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-primary);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
 }
 
-.contact .right form .field,
-.contact .right form .fields .field{
-    height: 45px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.contact .right form .textarea{
-    height: 80px;
-    width: 100%;
-}
-
-.contact .right form .name{
-    margin-right: 10px;
-}
-
-.contact .right form .email{
-    margin-left: 10px;
-}
-
-.contact .right form .field input,
-.contact .right form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    border: 1px solid lightgrey;
-    border-radius: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.contact .right form .textarea textarea{
-    margin-top: 10px;
-    resize: none;
-}
-
-.contact .right form .button{
-    height: 47px;
-    width: 170px;
-}
-
-.contact .right form .button button{
-    width: 100%;
-    height: 100%;
-    border: 2px solid aqua;
-    background: #0245aa;
+.contact-card-icon i{
+    font-size: 24px;
     color: #fff;
-    font-size: 20px;
+}
+
+.contact-card h3{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.contact-card p{
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.contact-form-wrapper{
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 16px;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+}
+
+.contact-form-heading{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.contact-form-field{
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.contact-form-grid .contact-form-field{
+    margin-bottom: 0;
+}
+
+.contact-form-field input,
+.contact-form-field textarea{
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-field textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form-field input:focus,
+.contact-form-field textarea:focus{
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(2, 69, 170, 0.15);
+}
+
+.contact-form-field label{
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background: var(--color-bg);
+    padding: 0 4px;
+}
+
+.contact-form-field input:focus ~ label,
+.contact-form-field input:not(:placeholder-shown) ~ label,
+.contact-form-field textarea:focus ~ label,
+.contact-form-field textarea:not(:placeholder-shown) ~ label{
+    top: -10px;
+    left: 12px;
+    font-size: 0.75rem;
+    color: var(--color-primary);
     font-weight: 500;
-    border-radius: 6px;
+}
+
+.contact-submit-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 36px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 8px;
 }
 
-.contact .right form .button button:hover{
-    color: #0245aa;
-    background: none;
+.contact-submit-btn:hover{
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.contact-submit-btn i{
+    font-size: 1.2rem;
+}
+
+#form-status{
+    margin-top: 12px;
+    display: none;
+    font-size: 0.9rem;
+}
+
+#form-status.visible{
+    display: block;
+}
+
+#form-status.success{
+    color: var(--color-primary);
+}
+
+#form-status.error{
+    color: #e74c3c;
 }
 
 /* Pop-up Contact section */
@@ -721,7 +988,7 @@ section .title::after{
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background: #0245aa;
+    background: var(--color-primary);
     padding: 2px;
     margin-bottom: 10px;
 }
@@ -738,8 +1005,7 @@ section .title::after{
 .my-profile .profession{
     font-size: 18px;
     font-weight: 500;
-    color: #333;
-
+    color: var(--color-text-secondary);
 }
 
 .my-profile .profession{
@@ -751,7 +1017,7 @@ section .title::after{
     display: flex;
     align-items: center;
     padding: 12px 20px;
-    background: #0245aa;
+    background: var(--color-primary);
     margin-top: 15px;
     border-radius: 6px;
     cursor: pointer;
@@ -759,7 +1025,7 @@ section .title::after{
 }
 
 .my-profile .button:hover{
-    background: #317ae7;
+    background: var(--color-primary-light);
 }
 
 .my-profile .button i{
@@ -804,7 +1070,7 @@ section .title::after{
     padding: 30px;
     max-width: 380px;
     width: 100%;
-    background: #fff;
+    background: var(--color-bg);
     border-radius: 12px;
 }
 
@@ -813,13 +1079,13 @@ section .title::after{
     top: 16px;
     right: 16px;
     font-size: 24px;
-    color: #b4b4b4;
+    color: var(--color-text-light);
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .popup-box .close:hover{
-    color: #333;
+    color: var(--color-text-secondary);
 }
 
 .myProfile .popup-box .my-profile-text{
@@ -855,13 +1121,14 @@ section .title::after{
     width: 100%;
     margin-top: 20px;
     outline: none;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     padding: 12px;
     border-radius: 6px;
     resize: none;
     font-size: 14px;
     font-weight: 400;
-    background: #f3f3f3;
+    background: var(--color-bg-alt);
+    color: var(--color-text);
 }
 
 .myProfile .popup-box .button{
@@ -875,7 +1142,7 @@ section .title::after{
     border: none;
     padding: 6px 12px;
     border-radius: 6px;
-    background: #2364c5;
+    background: var(--color-primary-light);
     color: #fff;
     margin-left: 8px;
     font-size: 14px;
@@ -892,12 +1159,24 @@ section .title::after{
 }
 
 .button button.send:hover{
-    background: #0b46e9;
+    background: var(--color-primary-dark);
+}
+
+/* Scroll animations */
+.scroll-reveal{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-reveal.revealed{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Footer section styling */
 footer{
-    background: #111;
+    background: var(--color-footer-bg);
     padding: 20px 23px;
     color: #fff;
 }
@@ -1003,7 +1282,7 @@ footer span a:hover{
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: var(--color-nav-bg);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -1054,24 +1333,40 @@ footer span a:hover{
         flex: 100%;
     }
 
-    .skills .skills-content .column,
-    .contact .contact-content .column{
-        width: 100%;
-        margin-bottom: 35px;
+    .blog-grid{
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-cards{
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-form-wrapper{
+        padding: 30px 24px;
+    }
+
+    .contact-form-grid{
+        grid-template-columns: 1fr;
     }
 
     .portfolio_container{
         overflow: initial;
     }
-    
+
     .portfolio_content{
         padding: 0 12rem;
     }
-    
+
     .drawings_container{
         overflow: initial;
     }
-    
+
     .drawings_content{
         padding: 0 16rem;
     }
@@ -1126,6 +1421,15 @@ footer span a:hover{
 
     .home .home-content .text-3{
         font-size: 27px;
+    }
+
+    .contact-form-wrapper{
+        padding: 24px 16px;
+    }
+
+    .contact-submit-btn{
+        width: 100%;
+        justify-content: center;
     }
 
     .portfolio_container{
